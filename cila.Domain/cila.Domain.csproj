@@ -9,12 +9,31 @@
   <ItemGroup>
     <None Remove="Proto\" />
     <None Remove="Scheme\" />
+    <None Remove="Infrastructure\" />
+    <None Remove="Database\" />
+    <None Remove="Database\Documents\" />
+    <None Remove="Database\Services\" />
+    <None Remove="Routers\" />
+    <None Remove="Infrastructure\Chains\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Proto\" />
     <Folder Include="Scheme\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Database\" />
+    <Folder Include="Database\Documents\" />
+    <Folder Include="Database\Services\" />
+    <Folder Include="Routers\" />
+    <Folder Include="Infrastructure\Chains\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.22.3" />
+    <PackageReference Include="Confluent.Kafka" Version="2.1.0" />
+    <PackageReference Include="Nethereum.Contracts" Version="4.14.0" />
+    <PackageReference Include="Nethereum.Accounts" Version="4.14.0" />
+    <PackageReference Include="Nethereum.Web3" Version="4.14.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.19.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 </Project>

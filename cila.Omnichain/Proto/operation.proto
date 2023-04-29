@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-import "command.proto";
-
-message Operation {
-  bytes router_id = 1;
-  repeated Command commands = 2;
-}

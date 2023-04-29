@@ -1,0 +1,32 @@
+﻿syntax = "proto3";
+
+package cila;
+
+option csharp_namespace = "cila.Router";
+
+service Omnichain {
+  rpc Mint (MintRequest) returns (OmnichainResponse);
+  rpc Transfer (TransferRequest) returns (OmnichainResponse);
+}
+
+message MintRequest  
+{  
+   string hash = 1;
+   string sender = 2;
+   string signature = 3;
+}  
+  
+message TransferRequest  
+{  
+   string hash = 1;
+   string sender = 2;
+   string recipient = 3;  
+   string signature = 4;
+}
+
+message OmnichainResponse
+{
+    bool success = 1;
+    string sender = 2;
+    repeated string logs = 3;
+}

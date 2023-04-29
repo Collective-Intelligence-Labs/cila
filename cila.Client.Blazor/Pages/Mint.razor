@@ -1,0 +1,80 @@
+﻿@using System.Text
+@using Nethereum.Signer
+@using Google.Protobuf.WellKnownTypes
+@using cila.Client.Blazor;
+
+@inject GrpcChannel Channel
+
+
+
+@page "/mint"
+
+<h1>Mint</h1>
+
+<p>
+    NFT data: 
+    <input type="text" @bind="@nftData" @oninput="OnHashInputEvent" style="width: 400px;"/>
+</p>
+
+<p>
+    <h3>Data</h3>
+</p>
+
+<p>
+    Signature: @signature
+</p>
+
+<p>
+    Sender: @me
+</p>
+
+<p>
+    Response: @response
+</p>
+
+<button class="btn btn-primary" @onclick="MintNow">Sign and mint</button>
+
+@code {
+    private string nftData = "My NFT";
+    private string pk = "a813851a121a15c924f24d4a2a316f6a0635714c05f939c5e760c22b45647d13";
+    private string signature = string.Empty;
+    private string me = "";
+    private string response = string.Empty;
+
+    private void OnHashInputEvent(ChangeEventArgs args)
+    {
+        nftData = args.Value.ToString();
+    }
+
+    private void OnPkInputEvent(ChangeEventArgs args)
+    {
+        pk = args.Value.ToString();
+    }
+
+    private async Task MintNow()
+    {
+        try
+        {
+            var signer = new MessageSigner();
+            signature = signer.HashAndSign(nftData, pk);
+
+            response = "Minting...";
+
+            me = signer.HashAndEcRecover(nftData, signature);
+
+            var client = new Omnichain.OmnichainClient(Channel);
+            var request = new MintRequest();
+            request.Hash = nftData;
+            request.Sender = me;
+            request.Signature = signature;
+
+            OmnichainResponse omnichainResponse = await client.MintAsync(request);
+            response = omnichainResponse.ToString();
+        }
+        catch (Exception ex)
+        {
+            response = ex.Message;
+        }
+    }
+}
+

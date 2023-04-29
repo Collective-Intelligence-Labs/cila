@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option csharp_namespace = "cila.Domain";
+
 enum DomainEventType {
   UNSPECIFIED = 0;
   NFT_MINTED = 1;
