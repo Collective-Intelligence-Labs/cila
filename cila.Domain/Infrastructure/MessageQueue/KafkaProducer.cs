@@ -14,7 +14,7 @@ namespace cila.Domain.Infrastructure.MessageQueue
         public KafkaProducer(ProducerConfig config)
         {
             this.config = config;
-            producer = new ProducerBuilder<string, byte[]>(config).SetValueSerializer(Serializers.ByteArray).Build();
+            producer = new ProducerBuilder<string, byte[]>(config).SetValueSerializer(Confluent.Kafka.Serializers.ByteArray).Build();
         }
 
         public async Task ProduceAsync<MessageType>(string topic, MessageType message) where MessageType : IMessage

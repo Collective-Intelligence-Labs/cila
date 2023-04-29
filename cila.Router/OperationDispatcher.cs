@@ -85,7 +85,7 @@ namespace cila.Router
                         commands);
 
                     var client = clientsFactory.GetChainClient(rOp.ChainId);
-                    var response = await client.SendAsync(rOp.Operation);
+                    var response = await client.DispatchOperationAsync(rOp.Operation);
 
                     result.Add(response);
 

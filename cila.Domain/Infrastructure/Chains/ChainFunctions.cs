@@ -1,18 +1,62 @@
-﻿using System.Numerics;
-using cila.Domain;
+﻿using System;
 using Google.Protobuf;
 using Nethereum.ABI.FunctionEncoding.Attributes;
 using Nethereum.Contracts;
-using Nethereum.RPC.Eth.DTOs;
 
 namespace cila.Domain.Infrastructure.Chains
 {
+    // Router
+
     [Function("dispatch")]
     public class DispatchFunction : FunctionMessage
     {
         [Parameter("bytes", "opBytes")]
         public byte[] OpBytes { get; set; }
     }
+
+
+    // Relay
+
+    [Function("relay", "address")]
+    public class ReadRelayFunction
+    {
+    }
+
+    [Function("pullBytes")]
+    public class PullFunction : FunctionMessage
+    {
+        [Parameter("string", "aggregateId", 1)]
+        public string AggregateId { get; set; }
+
+        [Parameter("uint", "startIndex", 2)]
+        public UInt32 StartIndex { get; set; }
+
+        [Parameter("uint", "limit", 3)]
+        public UInt32 Limit { get; set; }
+    }
+
+    [FunctionOutput]
+    public class PullFunctionOutputDTO : IFunctionOutputDTO
+    {
+        [Parameter("bytes[]", order: 1)]
+        public List<byte[]> Events { get; set; }
+    }
+
+    [Function("pushBytes")]
+    public class PushFunction : FunctionMessage
+    {
+        [Parameter("string", "aggregateId", 1)]
+        public string AggregateId { get; set; }
+
+        [Parameter("uint", "startIndex", 2)]
+        public UInt32 Position { get; set; }
+
+        [Parameter("bytes[]", "evnts", 3)]
+        public List<byte[]> Events { get; set; }
+    }
+
+
+    // DTO
 
     public class CommandDto
     {
@@ -52,4 +96,6 @@ namespace cila.Domain.Infrastructure.Chains
             return pbOperation;
         }
     }
+
 }
+

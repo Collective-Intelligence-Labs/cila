@@ -17,7 +17,7 @@ namespace cila.Domain.Infrastructure.Chains
         public IChainClient GetChainClient(string chainId)
         {
             var chain = chainsService.Get(chainId);
-            return new EthChainClient(chain.RPC, chain.DispatcherContract, chain.PrivateKey);
+            return new EthChainClient(chain.RPC, chain.DispatcherContract, chain.EventStoreContract, chain.PrivateKey);
         }
     }
 }
