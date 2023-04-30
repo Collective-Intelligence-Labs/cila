@@ -43,16 +43,15 @@ namespace cila.Domain.Database {
             return _client.GetDatabase(ReadmodelDatabaseName).GetCollection<AggregatedEventDocument>(Collections.AggregatedEvents);
         }
 
-        // TODO: Implement
-        //public IMongoCollection<OperationDocument> GetOperationsCollection()
-        //{
-        //    return _client.GetDatabase(_relayDatabaseName).GetCollection<OperationDocument>(Collections.Operations);
-        //}
+        public IMongoCollection<OperationDocument> GetOperationsCollection()
+        {
+            return _client.GetDatabase(ReadmodelDatabaseName).GetCollection<OperationDocument>(Collections.Operations);
+        }
 
-        //public IMongoCollection<NftDocument> GetNftsCollection()
-        //{
-        //    return _client.GetDatabase(_relayDatabaseName).GetCollection<OperationDocument>(Collections.Operations);
-        //}
+        public IMongoCollection<NFTDocument> GetNftsCollection()
+        {
+            return _client.GetDatabase(ReadmodelDatabaseName).GetCollection<NFTDocument>(Collections.Nfts);
+        }
 
 
         // Relay

@@ -17,11 +17,13 @@ namespace cila.Domain.Database.Services
 
         public void InitializeFromSettings(CilaSettings settings)
         {
-            var chainsInSettings = settings.Chains;
             var chains = GetAll();
+            var chainsInSettings = settings.Chains;
+            
             var chainsToAdd = chainsInSettings.Where(x => !chains.Select(c => c.ChainId).Contains(x.ChainId)).ToList();
 
             var chainsCollection = database.GetChainsCollection();
+
             if (chainsToAdd.Any())
             {
                 chainsCollection.InsertMany(chainsToAdd.Select(x => new ChainDocument
@@ -31,8 +33,23 @@ namespace cila.Domain.Database.Services
                     PrivateKey = x.PrivateKey,
                     DispatcherContract = x.DispatcherContract,
                     RPC = x.Rpc,
-                    ChainType = x.ChainType
+                    ChainType = x.ChainType,
+                    EventStoreContract = x.EventStoreContract
                 }));
+            }
+
+            foreach (var chain in chainsInSettings)
+            {
+                if (chain.DispatcherContract != null)
+                {
+                    var update = Builders<ChainDocument>.Update.Set(x => x.DispatcherContract, chain.DispatcherContract);
+                    chainsCollection.UpdateOne(x => x.ChainId == chain.ChainId && string.IsNullOrEmpty(x.DispatcherContract), update);
+                }
+                if (chain.EventStoreContract != null)
+                {
+                    var update = Builders<ChainDocument>.Update.Set(x => x.EventStoreContract, chain.EventStoreContract);
+                    chainsCollection.UpdateOne(x => x.ChainId == chain.ChainId && string.IsNullOrEmpty(x.EventStoreContract), update);
+                }
             }
         }
 

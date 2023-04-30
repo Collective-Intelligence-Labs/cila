@@ -4,14 +4,6 @@ namespace cila.Domain.Serializers
 {
     public class CilaDomainSerializer
     {
-
-        public static DomainEvent DeserializeDomainEvent(byte[] data)
-        {
-            var msg = new DomainEvent();
-            msg.MergeFrom(data);
-            return msg;
-        }
-
         public static byte[] Serialize(DomainEvent e)
         {
             return e.ToByteArray();
@@ -32,6 +24,43 @@ namespace cila.Domain.Serializers
             byte[] messageBytes = new byte[data.Length - 1];
             Buffer.BlockCopy(data, 1, messageBytes, 0, messageBytes.Length);
 
+            IMessage message;
+
+            switch (messageType)
+            {
+                case DomainEventType.NftMinted:
+                    message = new NFTMintedPayload();
+                    break;
+                case DomainEventType.NftTransfered:
+                    message = new NFTTransferedPayload();
+                    break;
+                default:
+                    throw new ArgumentException("Invalid message type");
+            }
+
+            message.MergeFrom(messageBytes);
+            return message;
+        }
+
+        public static DomainEvent DeserializeDomainEvent(byte[] data)
+        {
+            var msg = new DomainEvent();
+            msg.MergeFrom(data);
+            return msg;
+        }
+
+        public static InfrastructureEvent DeserializeInfrastructureEvent(byte[] data)
+        {
+            var msg = new InfrastructureEvent();
+            msg.MergeFrom(data);
+            return msg;
+        }
+
+
+        public static IMessage DeserializeEvent(DomainEvent e)
+        {
+            DomainEventType messageType = (DomainEventType)e.EvntType;
+            byte[] messageBytes = e.EvntPayload.ToArray();
             IMessage message;
 
             switch (messageType)

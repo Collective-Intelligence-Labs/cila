@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cila.Client.Blazor", "cila.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cila.Relay", "cila.Relay\cila.Relay.csproj", "{A9A1D155-D5AD-4382-9CBA-16C00C9F8484}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cila.Aggregator", "cila.Aggregator\cila.Aggregator.csproj", "{D7586C42-7E3B-44CE-8099-FF82C7FF4753}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A9A1D155-D5AD-4382-9CBA-16C00C9F8484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9A1D155-D5AD-4382-9CBA-16C00C9F8484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9A1D155-D5AD-4382-9CBA-16C00C9F8484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7586C42-7E3B-44CE-8099-FF82C7FF4753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7586C42-7E3B-44CE-8099-FF82C7FF4753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7586C42-7E3B-44CE-8099-FF82C7FF4753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7586C42-7E3B-44CE-8099-FF82C7FF4753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
