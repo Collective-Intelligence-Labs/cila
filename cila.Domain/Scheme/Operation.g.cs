@@ -24,22 +24,25 @@ namespace cila.Domain {
     static OperationReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9vcGVyYXRpb24ucHJvdG8iOgoJT3BlcmF0aW9uEhEKCXJvdXRlcl9pZBgB",
-            "IAEoDBIaCghjb21tYW5kcxgCIAMoCzIILkNvbW1hbmQiawoHQ29tbWFuZBIU",
-            "CgxhZ2dyZWdhdGVfaWQYASABKAwSFQoNY21kX3NpZ25hdHVyZRgCIAEoDBIe",
-            "CghjbWRfdHlwZRgDIAEoDjIMLkNvbW1hbmRUeXBlEhMKC2NtZF9wYXlsb2Fk",
-            "GAQgASgMIi0KDk1pbnRORlRQYXlsb2FkEgwKBGhhc2gYASABKAwSDQoFb3du",
-            "ZXIYAiABKAwiLgoSVHJhbnNmZXJORlRQYXlsb2FkEgwKBGhhc2gYASABKAwS",
-            "CgoCdG8YAiABKAwqPgoLQ29tbWFuZFR5cGUSDwoLVU5TUEVDSUZJRUQQABIM",
-            "CghNSU5UX05GVBABEhAKDFRSQU5TRkVSX05GVBACQg6qAgtjaWxhLkRvbWFp",
-            "bmIGcHJvdG8z"));
+            "Cg9vcGVyYXRpb24ucHJvdG8iSgoJT3BlcmF0aW9uEhEKCXJvdXRlcl9pZBgB",
+            "IAEoDBIaCghjb21tYW5kcxgCIAMoCzIILkNvbW1hbmQSDgoGc2VuZGVyGAMg",
+            "ASgMImsKB0NvbW1hbmQSFAoMYWdncmVnYXRlX2lkGAEgASgMEhUKDWNtZF9z",
+            "aWduYXR1cmUYAiABKAwSHgoIY21kX3R5cGUYAyABKA4yDC5Db21tYW5kVHlw",
+            "ZRITCgtjbWRfcGF5bG9hZBgEIAEoDCItCg5NaW50TkZUUGF5bG9hZBIMCgRo",
+            "YXNoGAEgASgMEg0KBW93bmVyGAIgASgMIi4KElRyYW5zZmVyTkZUUGF5bG9h",
+            "ZBIMCgRoYXNoGAEgASgMEgoKAnRvGAIgASgMIkIKEU9tbmljaGFpblJlc3Bv",
+            "bnNlEg8KB3N1Y2Nlc3MYASABKAgSDgoGc2VuZGVyGAIgASgJEgwKBGxvZ3MY",
+            "AyADKAkqPgoLQ29tbWFuZFR5cGUSDwoLVU5TUEVDSUZJRUQQABIMCghNSU5U",
+            "X05GVBABEhAKDFRSQU5TRkVSX05GVBACQg6qAgtjaWxhLkRvbWFpbmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::cila.Domain.CommandType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.Operation), global::cila.Domain.Operation.Parser, new[]{ "RouterId", "Commands" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.Operation), global::cila.Domain.Operation.Parser, new[]{ "RouterId", "Commands", "Sender" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.Command), global::cila.Domain.Command.Parser, new[]{ "AggregateId", "CmdSignature", "CmdType", "CmdPayload" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.MintNFTPayload), global::cila.Domain.MintNFTPayload.Parser, new[]{ "Hash", "Owner" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.TransferNFTPayload), global::cila.Domain.TransferNFTPayload.Parser, new[]{ "Hash", "To" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.TransferNFTPayload), global::cila.Domain.TransferNFTPayload.Parser, new[]{ "Hash", "To" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.OmnichainResponse), global::cila.Domain.OmnichainResponse.Parser, new[]{ "Success", "Sender", "Logs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -91,6 +94,7 @@ namespace cila.Domain {
     public Operation(Operation other) : this() {
       routerId_ = other.routerId_;
       commands_ = other.commands_.Clone();
+      sender_ = other.sender_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,6 +127,18 @@ namespace cila.Domain {
       get { return commands_; }
     }
 
+    /// <summary>Field number for the "sender" field.</summary>
+    public const int SenderFieldNumber = 3;
+    private pb::ByteString sender_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Sender {
+      get { return sender_; }
+      set {
+        sender_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -140,6 +156,7 @@ namespace cila.Domain {
       }
       if (RouterId != other.RouterId) return false;
       if(!commands_.Equals(other.commands_)) return false;
+      if (Sender != other.Sender) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,6 +166,7 @@ namespace cila.Domain {
       int hash = 1;
       if (RouterId.Length != 0) hash ^= RouterId.GetHashCode();
       hash ^= commands_.GetHashCode();
+      if (Sender.Length != 0) hash ^= Sender.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -172,6 +190,10 @@ namespace cila.Domain {
         output.WriteBytes(RouterId);
       }
       commands_.WriteTo(output, _repeated_commands_codec);
+      if (Sender.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Sender);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,6 +209,10 @@ namespace cila.Domain {
         output.WriteBytes(RouterId);
       }
       commands_.WriteTo(ref output, _repeated_commands_codec);
+      if (Sender.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Sender);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -201,6 +227,9 @@ namespace cila.Domain {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(RouterId);
       }
       size += commands_.CalculateSize(_repeated_commands_codec);
+      if (Sender.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Sender);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -217,6 +246,9 @@ namespace cila.Domain {
         RouterId = other.RouterId;
       }
       commands_.Add(other.commands_);
+      if (other.Sender.Length != 0) {
+        Sender = other.Sender;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -240,6 +272,10 @@ namespace cila.Domain {
             commands_.AddEntriesFrom(input, _repeated_commands_codec);
             break;
           }
+          case 26: {
+            Sender = input.ReadBytes();
+            break;
+          }
         }
       }
     #endif
@@ -261,6 +297,10 @@ namespace cila.Domain {
           }
           case 18: {
             commands_.AddEntriesFrom(ref input, _repeated_commands_codec);
+            break;
+          }
+          case 26: {
+            Sender = input.ReadBytes();
             break;
           }
         }
@@ -1013,6 +1053,258 @@ namespace cila.Domain {
           }
           case 18: {
             To = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class OmnichainResponse : pb::IMessage<OmnichainResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<OmnichainResponse> _parser = new pb::MessageParser<OmnichainResponse>(() => new OmnichainResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<OmnichainResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::cila.Domain.OperationReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OmnichainResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OmnichainResponse(OmnichainResponse other) : this() {
+      success_ = other.success_;
+      sender_ = other.sender_;
+      logs_ = other.logs_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OmnichainResponse Clone() {
+      return new OmnichainResponse(this);
+    }
+
+    /// <summary>Field number for the "success" field.</summary>
+    public const int SuccessFieldNumber = 1;
+    private bool success_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Success {
+      get { return success_; }
+      set {
+        success_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sender" field.</summary>
+    public const int SenderFieldNumber = 2;
+    private string sender_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Sender {
+      get { return sender_; }
+      set {
+        sender_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "logs" field.</summary>
+    public const int LogsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_logs_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> logs_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Logs {
+      get { return logs_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as OmnichainResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(OmnichainResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Success != other.Success) return false;
+      if (Sender != other.Sender) return false;
+      if(!logs_.Equals(other.logs_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Success != false) hash ^= Success.GetHashCode();
+      if (Sender.Length != 0) hash ^= Sender.GetHashCode();
+      hash ^= logs_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Success != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Success);
+      }
+      if (Sender.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Sender);
+      }
+      logs_.WriteTo(output, _repeated_logs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Success != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Success);
+      }
+      if (Sender.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Sender);
+      }
+      logs_.WriteTo(ref output, _repeated_logs_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Success != false) {
+        size += 1 + 1;
+      }
+      if (Sender.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sender);
+      }
+      size += logs_.CalculateSize(_repeated_logs_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(OmnichainResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Success != false) {
+        Success = other.Success;
+      }
+      if (other.Sender.Length != 0) {
+        Sender = other.Sender;
+      }
+      logs_.Add(other.logs_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Success = input.ReadBool();
+            break;
+          }
+          case 18: {
+            Sender = input.ReadString();
+            break;
+          }
+          case 26: {
+            logs_.AddEntriesFrom(input, _repeated_logs_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Success = input.ReadBool();
+            break;
+          }
+          case 18: {
+            Sender = input.ReadString();
+            break;
+          }
+          case 26: {
+            logs_.AddEntriesFrom(ref input, _repeated_logs_codec);
             break;
           }
         }

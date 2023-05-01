@@ -13,7 +13,7 @@ using static cila.Router.Omnichain;
 
 namespace cila.Domain.Services;
 
-public class OmnichainService : OmnichainBase
+public class OmnichainService : CilaDispatcher.CilaDispatcherBase
 { 
     private readonly ILogger<OmnichainService> _logger;
     private readonly KafkaProducer _producer;
@@ -28,7 +28,34 @@ public class OmnichainService : OmnichainBase
         this.settings = settings;
     }
 
-    public override async Task<OmnichainResponse> Mint(MintRequest request, ServerCallContext context)
+    public override async Task<OmnichainResponse> Dispatch(Operation request, ServerCallContext context)
+    {
+        try
+        {
+            var result = await dispatcher.Dispatch(request, settings.ExecutionEnvironmentId);
+
+            var response = new OmnichainResponse
+            {
+                //replace here with something
+                Success = true,
+                Sender = request.Sender.ToString()
+            };
+            response.Logs.AddRange(result.Select(x => string.Format("Executed on chain {0}, tx: {1}", x.ChainId, x.TransactionHash)));
+            return response;
+        }
+        catch (Exception ex)
+        {
+            var response = new OmnichainResponse
+            {
+                Success = false,
+                Sender = request.Sender.ToString()
+            };
+            response.Logs.Add(ex.Message);
+            return response;
+        }
+    }
+
+    public async Task<OmnichainResponse> Mint(MintRequest request, ServerCallContext context)
     {
         try
         {
@@ -76,7 +103,7 @@ public class OmnichainService : OmnichainBase
         }
     }
 
-    public override async Task<OmnichainResponse> Transfer(TransferRequest request, ServerCallContext context)
+    public async Task<OmnichainResponse> Transfer(TransferRequest request, ServerCallContext context)
     {
         try
         {

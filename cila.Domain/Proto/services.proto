@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "Proto/operation.proto";
+
+option csharp_namespace = "cila.Domain";
+
+service CilaDispatcher {
+  rpc Dispatch (Operation) returns (OmnichainResponse);
+}

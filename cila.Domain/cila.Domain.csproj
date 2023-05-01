@@ -37,5 +37,14 @@
     <PackageReference Include="MongoDB.Driver" Version="2.19.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Confluent.Kafka" Version="2.1.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.54.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Grpc" Version="2.46.6" />
   </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="Proto\services.proto" GrpcServices="Server,Client" />
+</ItemGroup>
 </Project>

@@ -5,6 +5,7 @@ option csharp_namespace = "cila.Domain";
 message Operation {
   bytes router_id = 1;
   repeated Command commands = 2;
+  bytes sender = 3;
 }
 
 enum CommandType {
@@ -28,4 +29,11 @@ message MintNFTPayload {
 message TransferNFTPayload {
     bytes hash = 1;
     bytes to = 2;
+}
+
+message OmnichainResponse
+{
+    bool success = 1;
+    string sender = 2;
+    repeated string logs = 3;
 }
