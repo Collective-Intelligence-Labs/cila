@@ -57,16 +57,9 @@ namespace cila.Client.Blazor.Pages
                     throw new Exception("MetaMask is not connected");
                 }
 
-                Signature = await PersonalSign(NftData);
-
                 Response = "Transferring...";
 
                 var client = new CilaDispatcher.CilaDispatcherClient(Channel);
-
-                var operation = new Operation
-                {
-                    Sender = string.Format("{0}-{1}", ClientId, Signer).ToByteString()
-                };
 
                 var payload = new TransferNFTPayload
                 {
@@ -74,12 +67,21 @@ namespace cila.Client.Blazor.Pages
                     To = To.ToByteStringFromHex(),
                 };
 
+                var payloadBytes = payload.ToByteArray();
+
+                Signature = await PersonalSign(payloadBytes.ByteArrayToHex());
+
                 var cmd = new Command
                 {
                     AggregateId = AggregateId.ToByteString(),
                     CmdType = CommandType.TransferNft,
                     CmdPayload = payload.ToByteArray().ToByteStringFromByteArray(),
                     CmdSignature = Signature.ToByteStringFromHex()
+                };
+
+                var operation = new Operation
+                {
+                    Sender = string.Format("{0}-{1}", ClientId, Signer).ToByteString()
                 };
 
                 operation.Commands.Add(cmd);

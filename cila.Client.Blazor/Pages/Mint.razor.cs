@@ -11,6 +11,7 @@ using MetaMask.Blazor.Exceptions;
 using Nethereum.ABI.FunctionEncoding;
 using Nethereum.ABI.Model;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text;
 
 namespace cila.Client.Blazor.Pages
 {
@@ -51,16 +52,9 @@ namespace cila.Client.Blazor.Pages
                     throw new Exception("MetaMask is not connected");
                 }
 
-                Signature = await PersonalSign(NftData);
-
                 Response = "Minting...";
 
                 var client = new CilaDispatcher.CilaDispatcherClient(Channel);
-
-                var operation = new Operation
-                {
-                    Sender = string.Format("{0}-{1}", ClientId, Signer).ToByteString()
-                };
 
                 var payload = new MintNFTPayload
                 {
@@ -68,12 +62,21 @@ namespace cila.Client.Blazor.Pages
                     Owner = Signer.ToByteStringFromHex()
                 };
 
+                var payloadBytes = payload.ToByteArray();
+
+                Signature = await PersonalSign(payloadBytes.ByteArrayToHex());
+
                 var cmd = new Command
                 {
                     AggregateId = AggregateId.ToByteString(),
                     CmdType = CommandType.MintNft,
                     CmdPayload = payload.ToByteArray().ToByteStringFromByteArray(),
                     CmdSignature = Signature.ToByteStringFromHex()
+                };
+
+                var operation = new Operation
+                {
+                    Sender = string.Format("{0}-{1}", ClientId, Signer).ToByteString(),
                 };
 
                 operation.Commands.Add(cmd);

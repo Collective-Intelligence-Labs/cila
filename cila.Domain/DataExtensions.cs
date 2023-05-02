@@ -43,6 +43,11 @@ namespace cila.Domain
             return ByteString.CopyFrom(bytes);
         }
 
+        public static string ByteArrayToHex(this byte[] value, bool prefix = false)
+        {
+            var strPrex = prefix ? "0x" : "";
+            return strPrex + string.Concat(value.Select(b => b.ToString("x2")).ToArray());
+        }
 
         private static bool IsValidHexString(string str)
         {
