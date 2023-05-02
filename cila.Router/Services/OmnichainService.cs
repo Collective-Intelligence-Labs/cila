@@ -9,7 +9,6 @@ using cila.Domain;
 using cila.Domain.Infrastructure.MessageQueue;
 using cila.Router;
 using cila.Domain.Infrastructure.Chains;
-using static cila.Router.Omnichain;
 
 namespace cila.Domain.Services;
 
