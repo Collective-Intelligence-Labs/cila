@@ -40,7 +40,8 @@ public class EventsHandler: IEventHandler
     {
         var nfts = _database.GetNftsCollection();
         var builder = Builders<NFTDocument>.Update.Set(x=> x.Owner, ByteStringToHexString(e.To));
-        nfts.UpdateOne(x=> x.Id == GetId(e.Hash, e.From), builder);
+        var hash = e.Hash.ToStringUtf8();
+        var r = nfts.UpdateOne(x=> x.Hash == hash, builder);
     }
 
     private string GetId(ByteString hash, ByteString owner)
@@ -56,6 +57,6 @@ public class EventsHandler: IEventHandler
     private string ByteStringToHexString(ByteString bs)
     {
         var bytes = bs.ToByteArray();
-        return BitConverter.ToString(bytes).Replace("-", "");
+        return bytes.ByteArrayToHex(true);
     }
 }

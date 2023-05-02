@@ -22,10 +22,19 @@ else if (string.IsNullOrEmpty(SelectedAddress))
         Connected account: @SelectedAddress
     </p>
     <p>
-        NFT data:
-        <input type="text" @bind="@NftData" @oninput="OnNftDataInputEvent" style="width: 400px;" />
+        <InputFile OnChange="@OnChange" accept="image/png, image/jpeg, image/gif" id="inputFile" />
+		<label for="inputFile">Choose file</label>
     </p>
 
+    <p>
+        NFT data: @NftData
+    </p>
+    <p>
+        @if (!string.IsNullOrEmpty(NftImage.Base64Data))
+        {
+            <img src="@string.Format("data:{0};base64,{1}", NftImage.ContentType, NftImage.Base64Data)" width="400" height="400"/>
+        }
+    </p>
     <p>
         Signature: @(Signature ?? "Not signed")
     </p>

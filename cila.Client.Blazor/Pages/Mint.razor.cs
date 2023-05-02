@@ -12,18 +12,27 @@ using Nethereum.ABI.FunctionEncoding;
 using Nethereum.ABI.Model;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace cila.Client.Blazor.Pages
 {
     public partial class Mint : IDisposable
     {
+        public struct ImageFile
+        {
+            public string Base64Data { get; set; }
+            public string ContentType { get; set; }
+            public string FileName { get; set; }
+        }
+
         private const string AggregateId = "8863F36E552Fd66296C0b3a3D2e4028105226DB7";
         private const string ClientId = "47B0430A426fe33931aBa1e7b85d6fa34C344847";
 
         [Inject]
         public GrpcChannel Channel { get; set; }
 
-        private string NftData = "My NFT";
+        private ImageFile NftImage;
+        private string NftData = string.Empty;
         private string Signature = string.Empty;
         private string Signer = string.Empty;
         private string Response = string.Empty;
@@ -43,6 +52,26 @@ namespace cila.Client.Blazor.Pages
             NftData = args.Value.ToString();
         }
 
+        private async Task OnChange(InputFileChangeEventArgs args)
+        {
+            var file = args.File; // get the files selected by the users
+
+            var buf = new byte[file.Size]; // allocate a buffer to fill with the file's data
+            using (var stream = file.OpenReadStream())
+            {
+                await stream.ReadAsync(buf); // copy the stream to the buffer
+            }
+
+            NftImage = new ImageFile
+            {
+                Base64Data = Convert.ToBase64String(buf),
+                ContentType = file.ContentType,
+                FileName = file.Name
+            };
+
+            NftData = NftImage.Base64Data.CalculateKeccak256();
+        }
+
         private async Task SignAndMint()
         {
             try
@@ -52,13 +81,18 @@ namespace cila.Client.Blazor.Pages
                     throw new Exception("MetaMask is not connected");
                 }
 
+                if (string.IsNullOrEmpty(NftData))
+                {
+                    throw new ArgumentException("NFT data is empty");
+                }
+
                 Response = "Minting...";
 
                 var client = new CilaDispatcher.CilaDispatcherClient(Channel);
 
                 var payload = new MintNFTPayload
                 {
-                    Hash = NftData.CalculateKeccak256().ToByteStringFromHex(),
+                    Hash = NftData.ToByteString(),
                     Owner = Signer.ToByteStringFromHex()
                 };
 

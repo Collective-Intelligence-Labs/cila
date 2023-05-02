@@ -28,7 +28,7 @@ public class NftController : ControllerBase
         return nftService.FindOneNft(id);
     }
 
-    [HttpGet("/owner/{id}")]
+    [HttpGet("owner/{id}")]
     public IEnumerable<NFTDocument> GetByOwner(string id)
     {
         return nftService.FindAllNfts(id);

@@ -4,6 +4,10 @@
 
 <h1>Transfer</h1>
 
+
+
+
+
 @if (!HasMetaMask)
 {
     <p>No MetaMask detected. Please install <a href="https://metamask.io" target="_blank">MetaMask</a>.</p>
@@ -22,10 +26,29 @@ else if (string.IsNullOrEmpty(SelectedAddress))
     <p>
         Connected account: @SelectedAddress
     </p>
-    <p>
-        NFT data:
-        <input type="text" @bind="@NftData" @oninput="OnNftDataInputEvent" style="width: 400px;" />
-    </p>
+
+    <p>My NFTs</p>
+    <table>
+        <thead>
+            <tr>
+                <th>NFT Id</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var nft in Nfts)
+            {
+                <tr>
+                    <td>
+                        @nft.Hash
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => SignAndTransfer(nft.Hash)" disabled="@string.IsNullOrEmpty(To)">Sign and transfer</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
     <p>
         Transfer to:
@@ -43,7 +66,4 @@ else if (string.IsNullOrEmpty(SelectedAddress))
     <p>
         Response: @Response
     </p>
-
-    <button class="btn btn-primary" @onclick="SignAndTransfer">Sign and transfer</button>
-
 }

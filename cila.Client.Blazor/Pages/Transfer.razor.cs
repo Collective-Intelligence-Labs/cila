@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.NetworkInformation;
 using cila.Domain;
+using cila.Domain.Database.Documents;
 using MetaMask.Blazor;
 using Microsoft.AspNetCore.Components;
 using Nethereum.Signer;
@@ -11,6 +12,10 @@ using MetaMask.Blazor.Exceptions;
 using Nethereum.ABI.FunctionEncoding;
 using Nethereum.ABI.Model;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static cila.Client.Blazor.Pages.FetchData;
+using static System.Net.WebRequestMethods;
+using System.Text.Json;
+using System.Text;
 
 namespace cila.Client.Blazor.Pages
 {
@@ -18,16 +23,20 @@ namespace cila.Client.Blazor.Pages
     {
         private const string AggregateId = "8863F36E552Fd66296C0b3a3D2e4028105226DB7";
         private const string ClientId = "47B0430A426fe33931aBa1e7b85d6fa34C344847";
+        private const string AggregatorApiUrl = "http://localhost:5276/api/";
 
         [Inject]
         public GrpcChannel Channel { get; set; }
 
-        private string NftData = "My NFT";
+        [Inject]
+        public IHttpClientFactory HttpClientFactory { get; set; }
+
         private string Signature = string.Empty;
         private string Signer = string.Empty;
         private string Response = string.Empty;
         private string To = string.Empty;
 
+        private List<NFTDocument> Nfts = new List<NFTDocument>();
 
         [Inject]
         public IMetaMaskService MetaMaskService { get; set; }
@@ -37,18 +46,12 @@ namespace cila.Client.Blazor.Pages
         private string? SelectedAddress { get; set; } = null;
 
 
-
-        private void OnNftDataInputEvent(ChangeEventArgs args)
-        {
-            NftData = args.Value.ToString();
-        }
-
         private void OnToInputEvent(ChangeEventArgs args)
         {
             To = args.Value.ToString();
         }
 
-        private async Task SignAndTransfer()
+        private async Task SignAndTransfer(string nftId)
         {
             try
             {
@@ -63,7 +66,7 @@ namespace cila.Client.Blazor.Pages
 
                 var payload = new TransferNFTPayload
                 {
-                    Hash = NftData.CalculateKeccak256().ToByteStringFromHex(),
+                    Hash = nftId.ToByteString(),
                     To = To.ToByteStringFromHex(),
                 };
 
@@ -88,6 +91,8 @@ namespace cila.Client.Blazor.Pages
 
                 cila.Domain.OmnichainResponse omnichainResponse = await client.DispatchAsync(operation);
                 Response = omnichainResponse.ToString();
+
+                await LoadNfts();
             }
             catch (Exception ex)
             {
@@ -149,6 +154,28 @@ namespace cila.Client.Blazor.Pages
                 await GetSelectedNetwork();
             }
 
+            await LoadNfts();
+        }
+
+        private async Task LoadNfts()
+        {
+            var httpRequest = new HttpRequestMessage(HttpMethod.Get, string.Concat(AggregatorApiUrl, "nft/owner/", SelectedAddress));
+            httpRequest.Headers.Add("Access-Control-Allow-Origin", "*");
+
+            var httpClient = HttpClientFactory.CreateClient();
+            var httpResponse = await httpClient.SendAsync(httpRequest);
+            if (httpResponse.IsSuccessStatusCode)
+            {
+                var stream = await httpResponse.Content.ReadAsStreamAsync();
+
+                var jsonOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+                jsonOptions.PropertyNameCaseInsensitive = true;
+
+                var data = await JsonSerializer.DeserializeAsync
+                    <IEnumerable<NFTDocument>>(stream, jsonOptions);
+
+                Nfts = data?.ToList() ?? new List<NFTDocument>();
+            }
         }
 
         private void IMetaMaskService_OnDisconnectEvent()
