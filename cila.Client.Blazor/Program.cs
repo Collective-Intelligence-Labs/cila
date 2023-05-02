@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using cila.Client.Blazor;
 using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
+using MetaMask.Blazor;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -26,6 +27,8 @@ builder.Services.AddSingleton(services =>
 });
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddMetaMaskBlazor();
 
 await builder.Build().RunAsync();
 

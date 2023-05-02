@@ -1,107 +1,49 @@
-﻿@using System.Text
-@using Nethereum.Signer
-@using Google.Protobuf.WellKnownTypes
-@using cila.Domain;
-@using Google.Protobuf;
-
-@inject GrpcChannel Channel
-
-
+﻿@namespace cila.Client.Blazor.Pages
 
 @page "/transfer"
 
 <h1>Transfer</h1>
 
-<p>
-    NFT data:
-    <input type="text" @bind="@nftData" @oninput="OnHashInputEvent" style="width: 400px;" />
-</p>
-
-<p>
-    Transfer to:
-    <input type="text" @bind="@to" @oninput="OnToInputEvent" style="width: 400px;" />
-</p>
-
-<p>
-    <h3>Data</h3>
-</p>
-
-<p>
-    Signature: @signature
-</p>
-
-<p>
-    Transfer to: @to
-</p>
-
-<p>
-    Sender: @me
-</p>
-
-<p>
-    Response: @response
-</p>
-
-<button class="btn btn-primary" @onclick="TransferNow">Sign and transfer</button>
-
-@code {
-    private string nftData = "";
-    private string pk = "a813851a121a15c924f24d4a2a316f6a0635714c05f939c5e760c22b45647d13";
-    private string signature = string.Empty;
-    private string me = string.Empty;
-    private string response = string.Empty;
-    private string to = string.Empty;
-
-    private const string AggregateId = "8863F36E552Fd66296C0b3a3D2e4028105226DB7";
-
-    private void OnHashInputEvent(ChangeEventArgs args)
-    {
-        nftData = args.Value.ToString();
-    }
-
-    private void OnToInputEvent(ChangeEventArgs args)
-    {
-        to = args.Value.ToString();
-    }
-
-    private async Task TransferNow()
-    {
-        try
-        {
-            var signer = new MessageSigner();
-            signature = signer.HashAndSign(nftData, pk);
-
-            response = "Transferring...";
-
-            me = signer.HashAndEcRecover(nftData, signature);
-
-            var client = new CilaDispatcher.CilaDispatcherClient(Channel);
-
-            var operation = new Operation();
-
-            var payload = new TransferNFTPayload
-            {
-                Hash = nftData.CalculateKeccak256().ToByteStringFromHex(),
-                To = to.ToByteStringFromHex(),
-            };
-
-            var cmd = new Command
-            {
-                AggregateId = AggregateId.ToByteString(),
-                CmdType = CommandType.TransferNft,
-                CmdPayload = payload.ToByteArray().ToByteStringFromByteArray(),
-                CmdSignature = signature.ToByteStringFromHex()
-            };
-
-            operation.Commands.Add(cmd);
-
-            cila.Domain.OmnichainResponse omnichainResponse = await client.DispatchAsync(operation);
-            response = omnichainResponse.ToString();
-        }
-        catch (Exception ex)
-        {
-            response = ex.Message;
-        }
-    }
+@if (!HasMetaMask)
+{
+    <p>No MetaMask detected. Please install <a href="https://metamask.io" target="_blank">MetaMask</a>.</p>
+}
+else if (string.IsNullOrEmpty(SelectedAddress))
+{
+    <button class="btn btn-primary" @onclick="ConnectMetaMask">Initialize connection with MetaMask</button>
+    <br />
+    <p>@MetaMaskInitializedMessage</p>
+    <br />
 }
 
+@if (HasMetaMask && !string.IsNullOrEmpty(SelectedAddress))
+{
+
+    <p>
+        Connected account: @SelectedAddress
+    </p>
+    <p>
+        NFT data:
+        <input type="text" @bind="@NftData" @oninput="OnNftDataInputEvent" style="width: 400px;" />
+    </p>
+
+    <p>
+        Transfer to:
+        <input type="text" @bind="@To" @oninput="OnToInputEvent" style="width: 400px;" />
+    </p>
+
+    <p>
+        Signature: @(Signature ?? "Not signed")
+    </p>
+
+    <p>
+        Signer: @(Signer ?? SelectedAddress)
+    </p>
+
+    <p>
+        Response: @Response
+    </p>
+
+    <button class="btn btn-primary" @onclick="SignAndTransfer">Sign and transfer</button>
+
+}
