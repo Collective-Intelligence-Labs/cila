@@ -35,7 +35,7 @@ namespace cila.Router
 
             foreach (var op in operations)
             {
-                await dispatcher.Dispatch(op, settings.ExecutionEnvironmentId);
+                await dispatcher.Dispatch(op);
             }
         }
 

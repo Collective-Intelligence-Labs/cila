@@ -31,11 +31,12 @@ namespace cila.Router
             this.executionChainEventService = executionChainEventService;
         }
 
-        public async Task<IEnumerable<ChainResponse>> Dispatch(Operation operation, string routerId)
+        public async Task<IEnumerable<ChainResponse>> Dispatch(Operation operation)
         {
             var versionNullable = executionChainEventService.GetLastVersion(settings.AggregateID);
             var version = versionNullable.HasValue ? versionNullable + 1 : 0;
             var operationId = settings.AggregateID + version;
+            var routerId = operation.RouterId.ToStringUtf8();
 
             await ProduceOperationInitiatedEvent(
                 "Execution chain will be selected automatically",

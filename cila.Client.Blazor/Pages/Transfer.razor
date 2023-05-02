@@ -1,6 +1,8 @@
 ﻿@using System.Text
 @using Nethereum.Signer
 @using Google.Protobuf.WellKnownTypes
+@using cila.Domain;
+@using Google.Protobuf;
 
 @inject GrpcChannel Channel
 
@@ -11,7 +13,7 @@
 <h1>Transfer</h1>
 
 <p>
-    NFT data: 
+    NFT data:
     <input type="text" @bind="@nftData" @oninput="OnHashInputEvent" style="width: 400px;" />
 </p>
 
@@ -50,6 +52,8 @@
     private string response = string.Empty;
     private string to = string.Empty;
 
+    private const string AggregateId = "8863F36E552Fd66296C0b3a3D2e4028105226DB7";
+
     private void OnHashInputEvent(ChangeEventArgs args)
     {
         nftData = args.Value.ToString();
@@ -71,14 +75,27 @@
 
             me = signer.HashAndEcRecover(nftData, signature);
 
-            var client = new Omnichain.OmnichainClient(Channel);
-            var request = new TransferRequest();
-            request.Hash = nftData;
-            request.Sender = me;
-            request.Signature = signature;
-            request.Recipient = to;
+            var client = new CilaDispatcher.CilaDispatcherClient(Channel);
 
-            OmnichainResponse omnichainResponse = await client.TransferAsync(request);
+            var operation = new Operation();
+
+            var payload = new TransferNFTPayload
+            {
+                Hash = nftData.CalculateKeccak256().ToByteStringFromHex(),
+                To = to.ToByteStringFromHex(),
+            };
+
+            var cmd = new Command
+            {
+                AggregateId = AggregateId.ToByteString(),
+                CmdType = CommandType.TransferNft,
+                CmdPayload = payload.ToByteArray().ToByteStringFromByteArray(),
+                CmdSignature = signature.ToByteStringFromHex()
+            };
+
+            operation.Commands.Add(cmd);
+
+            cila.Domain.OmnichainResponse omnichainResponse = await client.DispatchAsync(operation);
             response = omnichainResponse.ToString();
         }
         catch (Exception ex)

@@ -114,7 +114,7 @@ app.MapPost("/route", async (HttpContext context) =>
         var operation = new Operation();
         operation.MergeFrom(bytes);
         var dispatcher = serviceProvider.GetService<OperationDispatcher>();
-        await dispatcher.Dispatch(operation, settings.ExecutionEnvironmentId);
+        await dispatcher.Dispatch(operation);
         context.Response.StatusCode = 200;
         await context.Response.WriteAsync("Success");
     }

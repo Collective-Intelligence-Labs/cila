@@ -2,6 +2,8 @@
 @using Nethereum.Signer
 @using Google.Protobuf.WellKnownTypes
 @using cila.Client.Blazor;
+@using cila.Domain;
+@using Google.Protobuf;
 
 @inject GrpcChannel Channel
 
@@ -41,6 +43,9 @@
     private string me = "";
     private string response = string.Empty;
 
+    private const string AggregateId = "8863F36E552Fd66296C0b3a3D2e4028105226DB7";
+    private const string ClientId = "blazorv1";
+
     private void OnHashInputEvent(ChangeEventArgs args)
     {
         nftData = args.Value.ToString();
@@ -62,13 +67,30 @@
 
             me = signer.HashAndEcRecover(nftData, signature);
 
-            var client = new Omnichain.OmnichainClient(Channel);
-            var request = new MintRequest();
-            request.Hash = nftData;
-            request.Sender = me;
-            request.Signature = signature;
+            var client = new CilaDispatcher.CilaDispatcherClient(Channel);
 
-            OmnichainResponse omnichainResponse = await client.MintAsync(request);
+            var operation = new Operation
+            {
+                Sender = string.Format("{0}-{1}", ClientId, me).ToByteString()
+            };
+
+            var payload = new MintNFTPayload
+            {
+                Hash = nftData.CalculateKeccak256().ToByteStringFromHex(),
+                Owner = me.ToByteStringFromHex()
+            };
+
+            var cmd = new Command
+            {
+                AggregateId = AggregateId.ToByteString(),
+                CmdType = CommandType.MintNft,
+                CmdPayload = payload.ToByteArray().ToByteStringFromByteArray(),
+                CmdSignature = signature.ToByteStringFromHex()
+            };
+
+            operation.Commands.Add(cmd);
+
+            cila.Domain.OmnichainResponse omnichainResponse = await client.DispatchAsync(operation);
             response = omnichainResponse.ToString();
         }
         catch (Exception ex)

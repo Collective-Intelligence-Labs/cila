@@ -24,18 +24,20 @@ namespace cila.Domain.Database.Services
 
             var chainsCollection = database.GetChainsCollection();
 
-            if (chainsToAdd.Any())
+            foreach (var cta in chainsToAdd)
             {
-                chainsCollection.InsertMany(chainsToAdd.Select(x => new ChainDocument
+                if (chains.Select(x => x.Id).Contains(cta.ChainId)) continue;
+
+                chainsCollection.InsertOne(new ChainDocument
                 {
-                    Id = x.ChainId,
-                    ChainId = x.ChainId,
-                    PrivateKey = x.PrivateKey,
-                    DispatcherContract = x.DispatcherContract,
-                    RPC = x.Rpc,
-                    ChainType = x.ChainType,
-                    EventStoreContract = x.EventStoreContract
-                }));
+                    Id = cta.ChainId,
+                    ChainId = cta.ChainId,
+                    PrivateKey = cta.PrivateKey,
+                    DispatcherContract = cta.DispatcherContract,
+                    RPC = cta.Rpc,
+                    ChainType = cta.ChainType,
+                    EventStoreContract = cta.EventStoreContract
+                });
             }
 
             foreach (var chain in chainsInSettings)
