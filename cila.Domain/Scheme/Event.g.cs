@@ -29,36 +29,38 @@ namespace cila.Domain {
             "dF9wYXlsb2FkGAMgASgMEhQKDGFnZ3JlZ2F0ZV9pZBgEIAEoCSIvChBORlRN",
             "aW50ZWRQYXlsb2FkEgwKBGhhc2gYASABKAwSDQoFb3duZXIYAiABKAwiPgoU",
             "TkZUVHJhbnNmZXJlZFBheWxvYWQSDAoEaGFzaBgBIAEoDBIMCgRmcm9tGAIg",
-            "ASgMEgoKAnRvGAMgASgMImQKEUFNTUNyZWF0ZWRQYXlsb2FkEg4KBmFzc2V0",
-            "MRgBIAEoDBIOCgZhc3NldDIYAiABKAwSDwoHc3VwcGx5MRgDIAEoBBIPCgdz",
-            "dXBwbHkyGAQgASgEEg0KBW93bmVyGAUgASgMIkoKFUxpcXVpZGl0eUFkZGVk",
-            "UGF5bG9hZBIPCgdhbW91bnQxGAEgASgEEg8KB2Ftb3VudDIYAiABKAQSDwoH",
-            "YWNjb3VudBgDIAEoDCJcChdMaXF1aWRpdHlSZW1vdmVkUGF5bG9hZBIOCgZz",
-            "aGFyZXMYASABKAQSDwoHYW1vdW50MRgCIAEoBBIPCgdhbW91bnQyGAMgASgE",
-            "Eg8KB2FjY291bnQYBCABKAwidAoTVG9rZW5zU3dhcGVkUGF5bG9hZBITCgth",
-            "bW91bnRfZnJvbRgBIAEoAxISCgphc3NldF9mcm9tGAIgASgMEhEKCWFtb3Vu",
-            "dF90bxgDIAEoAxIQCghhc3NldF90bxgEIAEoDBIPCgdhY2NvdW50GAUgASgM",
-            "IkcKFUZ1bmRzV2l0aGRyYXduUGF5bG9hZBINCgVhc3NldBgBIAEoDBIOCgZh",
-            "bW91bnQYAiABKAQSDwoHYWNjb3VudBgDIAEoDCJHChVGdW5kc0RlcG9zaXRl",
-            "ZFBheWxvYWQSDQoFYXNzZXQYASABKAwSDgoGYW1vdW50GAIgASgEEg8KB2Fj",
-            "Y291bnQYAyABKAwqwQEKD0RvbWFpbkV2ZW50VHlwZRIPCgtVTlNQRUNJRklF",
-            "RBAAEg4KCk5GVF9NSU5URUQQARISCg5ORlRfVFJBTlNGRVJFRBACEg8KC0FN",
-            "TV9DUkVBVEVEEAMSEwoPTElRVUlESVRZX0FEREVEEAQSFQoRTElRVUlESVRZ",
-            "X1JFTU9WRUQQBRISCg5UT0tFTlNfU1dBUFBFRBAGEhMKD0ZVTkRTX0RFUE9T",
-            "SVRFRBAHEhMKD0ZVTkRTX1dJVEhEUkFXThAIQg6qAgtjaWxhLkRvbWFpbmIG",
-            "cHJvdG8z"));
+            "ASgMEgoKAnRvGAMgASgMInoKEUFNTUNyZWF0ZWRQYXlsb2FkEhQKDGFnZ3Jl",
+            "Z2F0ZV9pZBgBIAEoCRIOCgZhc3NldDEYAiABKAwSDgoGYXNzZXQyGAMgASgM",
+            "Eg8KB3N1cHBseTEYBCABKAQSDwoHc3VwcGx5MhgFIAEoBBINCgVvd25lchgG",
+            "IAEoDCJwChVMaXF1aWRpdHlBZGRlZFBheWxvYWQSFAoMYWdncmVnYXRlX2lk",
+            "GAEgASgJEg8KB2Ftb3VudDEYAiABKAQSDwoHYW1vdW50MhgDIAEoBBIOCgZz",
+            "aGFyZXMYBCABKAQSDwoHYWNjb3VudBgFIAEoDCJcChdMaXF1aWRpdHlSZW1v",
+            "dmVkUGF5bG9hZBIOCgZzaGFyZXMYASABKAQSDwoHYW1vdW50MRgCIAEoBBIP",
+            "CgdhbW91bnQyGAMgASgEEg8KB2FjY291bnQYBCABKAwiigEKE1Rva2Vuc1N3",
+            "YXBlZFBheWxvYWQSFAoMYWdncmVnYXRlX2lkGAEgASgJEhMKC2Ftb3VudF9m",
+            "cm9tGAIgASgDEhIKCmFzc2V0X2Zyb20YAyABKAwSEQoJYW1vdW50X3RvGAQg",
+            "ASgDEhAKCGFzc2V0X3RvGAUgASgMEg8KB2FjY291bnQYBiABKAwiXQoVRnVu",
+            "ZHNXaXRoZHJhd25QYXlsb2FkEhQKDGFnZ3JlZ2F0ZV9pZBgBIAEoCRINCgVh",
+            "c3NldBgCIAEoDBIOCgZhbW91bnQYAyABKAQSDwoHYWNjb3VudBgEIAEoDCJd",
+            "ChVGdW5kc0RlcG9zaXRlZFBheWxvYWQSFAoMYWdncmVnYXRlX2lkGAEgASgJ",
+            "Eg0KBWFzc2V0GAIgASgMEg4KBmFtb3VudBgDIAEoBBIPCgdhY2NvdW50GAQg",
+            "ASgMKsEBCg9Eb21haW5FdmVudFR5cGUSDwoLVU5TUEVDSUZJRUQQABIOCgpO",
+            "RlRfTUlOVEVEEAESEgoOTkZUX1RSQU5TRkVSRUQQAhIPCgtBTU1fQ1JFQVRF",
+            "RBADEhMKD0xJUVVJRElUWV9BRERFRBAEEhUKEUxJUVVJRElUWV9SRU1PVkVE",
+            "EAUSEgoOVE9LRU5TX1NXQVBQRUQQBhITCg9GVU5EU19ERVBPU0lURUQQBxIT",
+            "Cg9GVU5EU19XSVRIRFJBV04QCEIOqgILY2lsYS5Eb21haW5iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::cila.Domain.DomainEventType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.DomainEvent), global::cila.Domain.DomainEvent.Parser, new[]{ "EvntIdx", "EvntType", "EvntPayload", "AggregateId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.NFTMintedPayload), global::cila.Domain.NFTMintedPayload.Parser, new[]{ "Hash", "Owner" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.NFTTransferedPayload), global::cila.Domain.NFTTransferedPayload.Parser, new[]{ "Hash", "From", "To" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.AMMCreatedPayload), global::cila.Domain.AMMCreatedPayload.Parser, new[]{ "Asset1", "Asset2", "Supply1", "Supply2", "Owner" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.LiquidityAddedPayload), global::cila.Domain.LiquidityAddedPayload.Parser, new[]{ "Amount1", "Amount2", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.AMMCreatedPayload), global::cila.Domain.AMMCreatedPayload.Parser, new[]{ "AggregateId", "Asset1", "Asset2", "Supply1", "Supply2", "Owner" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.LiquidityAddedPayload), global::cila.Domain.LiquidityAddedPayload.Parser, new[]{ "AggregateId", "Amount1", "Amount2", "Shares", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.LiquidityRemovedPayload), global::cila.Domain.LiquidityRemovedPayload.Parser, new[]{ "Shares", "Amount1", "Amount2", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.TokensSwapedPayload), global::cila.Domain.TokensSwapedPayload.Parser, new[]{ "AmountFrom", "AssetFrom", "AmountTo", "AssetTo", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.FundsWithdrawnPayload), global::cila.Domain.FundsWithdrawnPayload.Parser, new[]{ "Asset", "Amount", "Account" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.FundsDepositedPayload), global::cila.Domain.FundsDepositedPayload.Parser, new[]{ "Asset", "Amount", "Account" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.TokensSwapedPayload), global::cila.Domain.TokensSwapedPayload.Parser, new[]{ "AggregateId", "AmountFrom", "AssetFrom", "AmountTo", "AssetTo", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.FundsWithdrawnPayload), global::cila.Domain.FundsWithdrawnPayload.Parser, new[]{ "AggregateId", "Asset", "Amount", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.FundsDepositedPayload), global::cila.Domain.FundsDepositedPayload.Parser, new[]{ "AggregateId", "Asset", "Amount", "Account" }, null, null, null, null)
           }));
     }
     #endregion
@@ -903,6 +905,7 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AMMCreatedPayload(AMMCreatedPayload other) : this() {
+      aggregateId_ = other.aggregateId_;
       asset1_ = other.asset1_;
       asset2_ = other.asset2_;
       supply1_ = other.supply1_;
@@ -917,8 +920,20 @@ namespace cila.Domain {
       return new AMMCreatedPayload(this);
     }
 
+    /// <summary>Field number for the "aggregate_id" field.</summary>
+    public const int AggregateIdFieldNumber = 1;
+    private string aggregateId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AggregateId {
+      get { return aggregateId_; }
+      set {
+        aggregateId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "asset1" field.</summary>
-    public const int Asset1FieldNumber = 1;
+    public const int Asset1FieldNumber = 2;
     private pb::ByteString asset1_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -930,7 +945,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "asset2" field.</summary>
-    public const int Asset2FieldNumber = 2;
+    public const int Asset2FieldNumber = 3;
     private pb::ByteString asset2_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -942,7 +957,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "supply1" field.</summary>
-    public const int Supply1FieldNumber = 3;
+    public const int Supply1FieldNumber = 4;
     private ulong supply1_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -954,7 +969,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "supply2" field.</summary>
-    public const int Supply2FieldNumber = 4;
+    public const int Supply2FieldNumber = 5;
     private ulong supply2_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -966,7 +981,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "owner" field.</summary>
-    public const int OwnerFieldNumber = 5;
+    public const int OwnerFieldNumber = 6;
     private pb::ByteString owner_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -992,6 +1007,7 @@ namespace cila.Domain {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AggregateId != other.AggregateId) return false;
       if (Asset1 != other.Asset1) return false;
       if (Asset2 != other.Asset2) return false;
       if (Supply1 != other.Supply1) return false;
@@ -1004,6 +1020,7 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AggregateId.Length != 0) hash ^= AggregateId.GetHashCode();
       if (Asset1.Length != 0) hash ^= Asset1.GetHashCode();
       if (Asset2.Length != 0) hash ^= Asset2.GetHashCode();
       if (Supply1 != 0UL) hash ^= Supply1.GetHashCode();
@@ -1027,24 +1044,28 @@ namespace cila.Domain {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Asset1.Length != 0) {
+      if (AggregateId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
+      if (Asset1.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteBytes(Asset1);
       }
       if (Asset2.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteBytes(Asset2);
       }
       if (Supply1 != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt64(Supply1);
       }
       if (Supply2 != 0UL) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt64(Supply2);
       }
       if (Owner.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteBytes(Owner);
       }
       if (_unknownFields != null) {
@@ -1057,24 +1078,28 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Asset1.Length != 0) {
+      if (AggregateId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
+      if (Asset1.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteBytes(Asset1);
       }
       if (Asset2.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteBytes(Asset2);
       }
       if (Supply1 != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt64(Supply1);
       }
       if (Supply2 != 0UL) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt64(Supply2);
       }
       if (Owner.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteBytes(Owner);
       }
       if (_unknownFields != null) {
@@ -1087,6 +1112,9 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AggregateId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AggregateId);
+      }
       if (Asset1.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Asset1);
       }
@@ -1113,6 +1141,9 @@ namespace cila.Domain {
     public void MergeFrom(AMMCreatedPayload other) {
       if (other == null) {
         return;
+      }
+      if (other.AggregateId.Length != 0) {
+        AggregateId = other.AggregateId;
       }
       if (other.Asset1.Length != 0) {
         Asset1 = other.Asset1;
@@ -1145,22 +1176,26 @@ namespace cila.Domain {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Asset1 = input.ReadBytes();
+            AggregateId = input.ReadString();
             break;
           }
           case 18: {
+            Asset1 = input.ReadBytes();
+            break;
+          }
+          case 26: {
             Asset2 = input.ReadBytes();
             break;
           }
-          case 24: {
+          case 32: {
             Supply1 = input.ReadUInt64();
             break;
           }
-          case 32: {
+          case 40: {
             Supply2 = input.ReadUInt64();
             break;
           }
-          case 42: {
+          case 50: {
             Owner = input.ReadBytes();
             break;
           }
@@ -1180,22 +1215,26 @@ namespace cila.Domain {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Asset1 = input.ReadBytes();
+            AggregateId = input.ReadString();
             break;
           }
           case 18: {
+            Asset1 = input.ReadBytes();
+            break;
+          }
+          case 26: {
             Asset2 = input.ReadBytes();
             break;
           }
-          case 24: {
+          case 32: {
             Supply1 = input.ReadUInt64();
             break;
           }
-          case 32: {
+          case 40: {
             Supply2 = input.ReadUInt64();
             break;
           }
-          case 42: {
+          case 50: {
             Owner = input.ReadBytes();
             break;
           }
@@ -1240,8 +1279,10 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LiquidityAddedPayload(LiquidityAddedPayload other) : this() {
+      aggregateId_ = other.aggregateId_;
       amount1_ = other.amount1_;
       amount2_ = other.amount2_;
+      shares_ = other.shares_;
       account_ = other.account_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1252,8 +1293,20 @@ namespace cila.Domain {
       return new LiquidityAddedPayload(this);
     }
 
+    /// <summary>Field number for the "aggregate_id" field.</summary>
+    public const int AggregateIdFieldNumber = 1;
+    private string aggregateId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AggregateId {
+      get { return aggregateId_; }
+      set {
+        aggregateId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "amount1" field.</summary>
-    public const int Amount1FieldNumber = 1;
+    public const int Amount1FieldNumber = 2;
     private ulong amount1_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1265,7 +1318,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "amount2" field.</summary>
-    public const int Amount2FieldNumber = 2;
+    public const int Amount2FieldNumber = 3;
     private ulong amount2_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1276,8 +1329,20 @@ namespace cila.Domain {
       }
     }
 
+    /// <summary>Field number for the "shares" field.</summary>
+    public const int SharesFieldNumber = 4;
+    private ulong shares_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Shares {
+      get { return shares_; }
+      set {
+        shares_ = value;
+      }
+    }
+
     /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 3;
+    public const int AccountFieldNumber = 5;
     private pb::ByteString account_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1303,8 +1368,10 @@ namespace cila.Domain {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AggregateId != other.AggregateId) return false;
       if (Amount1 != other.Amount1) return false;
       if (Amount2 != other.Amount2) return false;
+      if (Shares != other.Shares) return false;
       if (Account != other.Account) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1313,8 +1380,10 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AggregateId.Length != 0) hash ^= AggregateId.GetHashCode();
       if (Amount1 != 0UL) hash ^= Amount1.GetHashCode();
       if (Amount2 != 0UL) hash ^= Amount2.GetHashCode();
+      if (Shares != 0UL) hash ^= Shares.GetHashCode();
       if (Account.Length != 0) hash ^= Account.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1334,16 +1403,24 @@ namespace cila.Domain {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (AggregateId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
       if (Amount1 != 0UL) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteUInt64(Amount1);
       }
       if (Amount2 != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt64(Amount2);
       }
+      if (Shares != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Shares);
+      }
       if (Account.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -1356,16 +1433,24 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AggregateId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
       if (Amount1 != 0UL) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteUInt64(Amount1);
       }
       if (Amount2 != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt64(Amount2);
       }
+      if (Shares != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Shares);
+      }
       if (Account.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -1378,11 +1463,17 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AggregateId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AggregateId);
+      }
       if (Amount1 != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount1);
       }
       if (Amount2 != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount2);
+      }
+      if (Shares != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Shares);
       }
       if (Account.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Account);
@@ -1399,11 +1490,17 @@ namespace cila.Domain {
       if (other == null) {
         return;
       }
+      if (other.AggregateId.Length != 0) {
+        AggregateId = other.AggregateId;
+      }
       if (other.Amount1 != 0UL) {
         Amount1 = other.Amount1;
       }
       if (other.Amount2 != 0UL) {
         Amount2 = other.Amount2;
+      }
+      if (other.Shares != 0UL) {
+        Shares = other.Shares;
       }
       if (other.Account.Length != 0) {
         Account = other.Account;
@@ -1423,15 +1520,23 @@ namespace cila.Domain {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Amount1 = input.ReadUInt64();
+          case 10: {
+            AggregateId = input.ReadString();
             break;
           }
           case 16: {
+            Amount1 = input.ReadUInt64();
+            break;
+          }
+          case 24: {
             Amount2 = input.ReadUInt64();
             break;
           }
-          case 26: {
+          case 32: {
+            Shares = input.ReadUInt64();
+            break;
+          }
+          case 42: {
             Account = input.ReadBytes();
             break;
           }
@@ -1450,15 +1555,23 @@ namespace cila.Domain {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Amount1 = input.ReadUInt64();
+          case 10: {
+            AggregateId = input.ReadString();
             break;
           }
           case 16: {
+            Amount1 = input.ReadUInt64();
+            break;
+          }
+          case 24: {
             Amount2 = input.ReadUInt64();
             break;
           }
-          case 26: {
+          case 32: {
+            Shares = input.ReadUInt64();
+            break;
+          }
+          case 42: {
             Account = input.ReadBytes();
             break;
           }
@@ -1803,6 +1916,7 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TokensSwapedPayload(TokensSwapedPayload other) : this() {
+      aggregateId_ = other.aggregateId_;
       amountFrom_ = other.amountFrom_;
       assetFrom_ = other.assetFrom_;
       amountTo_ = other.amountTo_;
@@ -1817,8 +1931,20 @@ namespace cila.Domain {
       return new TokensSwapedPayload(this);
     }
 
+    /// <summary>Field number for the "aggregate_id" field.</summary>
+    public const int AggregateIdFieldNumber = 1;
+    private string aggregateId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AggregateId {
+      get { return aggregateId_; }
+      set {
+        aggregateId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "amount_from" field.</summary>
-    public const int AmountFromFieldNumber = 1;
+    public const int AmountFromFieldNumber = 2;
     private long amountFrom_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1830,7 +1956,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "asset_from" field.</summary>
-    public const int AssetFromFieldNumber = 2;
+    public const int AssetFromFieldNumber = 3;
     private pb::ByteString assetFrom_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1842,7 +1968,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "amount_to" field.</summary>
-    public const int AmountToFieldNumber = 3;
+    public const int AmountToFieldNumber = 4;
     private long amountTo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1854,7 +1980,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "asset_to" field.</summary>
-    public const int AssetToFieldNumber = 4;
+    public const int AssetToFieldNumber = 5;
     private pb::ByteString assetTo_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1866,7 +1992,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 5;
+    public const int AccountFieldNumber = 6;
     private pb::ByteString account_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1892,6 +2018,7 @@ namespace cila.Domain {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AggregateId != other.AggregateId) return false;
       if (AmountFrom != other.AmountFrom) return false;
       if (AssetFrom != other.AssetFrom) return false;
       if (AmountTo != other.AmountTo) return false;
@@ -1904,6 +2031,7 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AggregateId.Length != 0) hash ^= AggregateId.GetHashCode();
       if (AmountFrom != 0L) hash ^= AmountFrom.GetHashCode();
       if (AssetFrom.Length != 0) hash ^= AssetFrom.GetHashCode();
       if (AmountTo != 0L) hash ^= AmountTo.GetHashCode();
@@ -1927,24 +2055,28 @@ namespace cila.Domain {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (AggregateId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
       if (AmountFrom != 0L) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteInt64(AmountFrom);
       }
       if (AssetFrom.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteBytes(AssetFrom);
       }
       if (AmountTo != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt64(AmountTo);
       }
       if (AssetTo.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteBytes(AssetTo);
       }
       if (Account.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -1957,24 +2089,28 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AggregateId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
       if (AmountFrom != 0L) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteInt64(AmountFrom);
       }
       if (AssetFrom.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteBytes(AssetFrom);
       }
       if (AmountTo != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteInt64(AmountTo);
       }
       if (AssetTo.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteBytes(AssetTo);
       }
       if (Account.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -1987,6 +2123,9 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AggregateId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AggregateId);
+      }
       if (AmountFrom != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(AmountFrom);
       }
@@ -2013,6 +2152,9 @@ namespace cila.Domain {
     public void MergeFrom(TokensSwapedPayload other) {
       if (other == null) {
         return;
+      }
+      if (other.AggregateId.Length != 0) {
+        AggregateId = other.AggregateId;
       }
       if (other.AmountFrom != 0L) {
         AmountFrom = other.AmountFrom;
@@ -2044,23 +2186,27 @@ namespace cila.Domain {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            AggregateId = input.ReadString();
+            break;
+          }
+          case 16: {
             AmountFrom = input.ReadInt64();
             break;
           }
-          case 18: {
+          case 26: {
             AssetFrom = input.ReadBytes();
             break;
           }
-          case 24: {
+          case 32: {
             AmountTo = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 42: {
             AssetTo = input.ReadBytes();
             break;
           }
-          case 42: {
+          case 50: {
             Account = input.ReadBytes();
             break;
           }
@@ -2079,23 +2225,27 @@ namespace cila.Domain {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            AggregateId = input.ReadString();
+            break;
+          }
+          case 16: {
             AmountFrom = input.ReadInt64();
             break;
           }
-          case 18: {
+          case 26: {
             AssetFrom = input.ReadBytes();
             break;
           }
-          case 24: {
+          case 32: {
             AmountTo = input.ReadInt64();
             break;
           }
-          case 34: {
+          case 42: {
             AssetTo = input.ReadBytes();
             break;
           }
-          case 42: {
+          case 50: {
             Account = input.ReadBytes();
             break;
           }
@@ -2140,6 +2290,7 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FundsWithdrawnPayload(FundsWithdrawnPayload other) : this() {
+      aggregateId_ = other.aggregateId_;
       asset_ = other.asset_;
       amount_ = other.amount_;
       account_ = other.account_;
@@ -2152,8 +2303,20 @@ namespace cila.Domain {
       return new FundsWithdrawnPayload(this);
     }
 
+    /// <summary>Field number for the "aggregate_id" field.</summary>
+    public const int AggregateIdFieldNumber = 1;
+    private string aggregateId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AggregateId {
+      get { return aggregateId_; }
+      set {
+        aggregateId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "asset" field.</summary>
-    public const int AssetFieldNumber = 1;
+    public const int AssetFieldNumber = 2;
     private pb::ByteString asset_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2165,7 +2328,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 2;
+    public const int AmountFieldNumber = 3;
     private ulong amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2177,7 +2340,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 3;
+    public const int AccountFieldNumber = 4;
     private pb::ByteString account_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2203,6 +2366,7 @@ namespace cila.Domain {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AggregateId != other.AggregateId) return false;
       if (Asset != other.Asset) return false;
       if (Amount != other.Amount) return false;
       if (Account != other.Account) return false;
@@ -2213,6 +2377,7 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AggregateId.Length != 0) hash ^= AggregateId.GetHashCode();
       if (Asset.Length != 0) hash ^= Asset.GetHashCode();
       if (Amount != 0UL) hash ^= Amount.GetHashCode();
       if (Account.Length != 0) hash ^= Account.GetHashCode();
@@ -2234,16 +2399,20 @@ namespace cila.Domain {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Asset.Length != 0) {
+      if (AggregateId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
+      if (Asset.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteBytes(Asset);
       }
       if (Amount != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt64(Amount);
       }
       if (Account.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -2256,16 +2425,20 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Asset.Length != 0) {
+      if (AggregateId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
+      if (Asset.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteBytes(Asset);
       }
       if (Amount != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt64(Amount);
       }
       if (Account.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -2278,6 +2451,9 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AggregateId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AggregateId);
+      }
       if (Asset.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Asset);
       }
@@ -2298,6 +2474,9 @@ namespace cila.Domain {
     public void MergeFrom(FundsWithdrawnPayload other) {
       if (other == null) {
         return;
+      }
+      if (other.AggregateId.Length != 0) {
+        AggregateId = other.AggregateId;
       }
       if (other.Asset.Length != 0) {
         Asset = other.Asset;
@@ -2324,14 +2503,18 @@ namespace cila.Domain {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
+            AggregateId = input.ReadString();
+            break;
+          }
+          case 18: {
             Asset = input.ReadBytes();
             break;
           }
-          case 16: {
+          case 24: {
             Amount = input.ReadUInt64();
             break;
           }
-          case 26: {
+          case 34: {
             Account = input.ReadBytes();
             break;
           }
@@ -2351,14 +2534,18 @@ namespace cila.Domain {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
+            AggregateId = input.ReadString();
+            break;
+          }
+          case 18: {
             Asset = input.ReadBytes();
             break;
           }
-          case 16: {
+          case 24: {
             Amount = input.ReadUInt64();
             break;
           }
-          case 26: {
+          case 34: {
             Account = input.ReadBytes();
             break;
           }
@@ -2403,6 +2590,7 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FundsDepositedPayload(FundsDepositedPayload other) : this() {
+      aggregateId_ = other.aggregateId_;
       asset_ = other.asset_;
       amount_ = other.amount_;
       account_ = other.account_;
@@ -2415,8 +2603,20 @@ namespace cila.Domain {
       return new FundsDepositedPayload(this);
     }
 
+    /// <summary>Field number for the "aggregate_id" field.</summary>
+    public const int AggregateIdFieldNumber = 1;
+    private string aggregateId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AggregateId {
+      get { return aggregateId_; }
+      set {
+        aggregateId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "asset" field.</summary>
-    public const int AssetFieldNumber = 1;
+    public const int AssetFieldNumber = 2;
     private pb::ByteString asset_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2428,7 +2628,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 2;
+    public const int AmountFieldNumber = 3;
     private ulong amount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2440,7 +2640,7 @@ namespace cila.Domain {
     }
 
     /// <summary>Field number for the "account" field.</summary>
-    public const int AccountFieldNumber = 3;
+    public const int AccountFieldNumber = 4;
     private pb::ByteString account_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2466,6 +2666,7 @@ namespace cila.Domain {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AggregateId != other.AggregateId) return false;
       if (Asset != other.Asset) return false;
       if (Amount != other.Amount) return false;
       if (Account != other.Account) return false;
@@ -2476,6 +2677,7 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AggregateId.Length != 0) hash ^= AggregateId.GetHashCode();
       if (Asset.Length != 0) hash ^= Asset.GetHashCode();
       if (Amount != 0UL) hash ^= Amount.GetHashCode();
       if (Account.Length != 0) hash ^= Account.GetHashCode();
@@ -2497,16 +2699,20 @@ namespace cila.Domain {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Asset.Length != 0) {
+      if (AggregateId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
+      if (Asset.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteBytes(Asset);
       }
       if (Amount != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt64(Amount);
       }
       if (Account.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -2519,16 +2725,20 @@ namespace cila.Domain {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Asset.Length != 0) {
+      if (AggregateId.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(AggregateId);
+      }
+      if (Asset.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteBytes(Asset);
       }
       if (Amount != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt64(Amount);
       }
       if (Account.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteBytes(Account);
       }
       if (_unknownFields != null) {
@@ -2541,6 +2751,9 @@ namespace cila.Domain {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AggregateId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AggregateId);
+      }
       if (Asset.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Asset);
       }
@@ -2561,6 +2774,9 @@ namespace cila.Domain {
     public void MergeFrom(FundsDepositedPayload other) {
       if (other == null) {
         return;
+      }
+      if (other.AggregateId.Length != 0) {
+        AggregateId = other.AggregateId;
       }
       if (other.Asset.Length != 0) {
         Asset = other.Asset;
@@ -2587,14 +2803,18 @@ namespace cila.Domain {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
+            AggregateId = input.ReadString();
+            break;
+          }
+          case 18: {
             Asset = input.ReadBytes();
             break;
           }
-          case 16: {
+          case 24: {
             Amount = input.ReadUInt64();
             break;
           }
-          case 26: {
+          case 34: {
             Account = input.ReadBytes();
             break;
           }
@@ -2614,14 +2834,18 @@ namespace cila.Domain {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
+            AggregateId = input.ReadString();
+            break;
+          }
+          case 18: {
             Asset = input.ReadBytes();
             break;
           }
-          case 16: {
+          case 24: {
             Amount = input.ReadUInt64();
             break;
           }
-          case 26: {
+          case 34: {
             Account = input.ReadBytes();
             break;
           }

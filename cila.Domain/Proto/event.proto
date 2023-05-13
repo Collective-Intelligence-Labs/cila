@@ -50,10 +50,11 @@ message LiquidityAddedPayload {
 }
 
 message LiquidityRemovedPayload {
-  uint64 shares = 1;
-  uint64 amount1 = 2;
-  uint64 amount2 = 3;
-  bytes account = 4;
+  string aggregate_id = 1;
+  uint64 shares = 2;
+  uint64 amount1 = 3;
+  uint64 amount2 = 4;
+  bytes account = 5;
 }
 
 message TokensSwapedPayload {

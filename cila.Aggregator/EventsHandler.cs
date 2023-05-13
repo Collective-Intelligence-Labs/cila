@@ -17,8 +17,6 @@ public class EventsHandler: IEventHandler
     private readonly MarketsService _markets;
     private readonly BalancesService _balances;
 
-    private readonly string daoId = "DAO_ID_TEMP";
-
     public EventsHandler(MongoDatabase database, MarketsService markets, BalancesService balances)
     {
         _database = database;
@@ -53,7 +51,7 @@ public class EventsHandler: IEventHandler
     public void Handle(AMMCreatedPayload e)
     {
         var doc = new MarketDocument{
-            Id = daoId,
+            Id = e.AggregateId,
             Owner = ByteStringToHexString(e.Owner)
         };
         var asset1 = new AssetItem{
@@ -68,19 +66,19 @@ public class EventsHandler: IEventHandler
     public void Handle(LiquidityAddedPayload e)
     {
         _markets.AddLiquidity(ByteStringToHexString(e.Account), e.Amount1, e.Amount2);
-        var market = _markets.Get(daoId);
+        var market = _markets.Get(e.AggregateId);
         var account = ByteStringToHexString(e.Account);
-        _balances.RemoveBalance(account, daoId, market.Asset1.Symbol, e.Amount1);
-        _balances.RemoveBalance(account, daoId, market.Asset2.Symbol, e.Amount2);
+        _balances.RemoveBalance(account, e.AggregateId, market.Asset1.Symbol, e.Amount1);
+        _balances.RemoveBalance(account, e.AggregateId, market.Asset2.Symbol, e.Amount2);
     }
 
     public void Handle(LiquidityRemovedPayload e)
     {
-        _markets.RemoveLiquidity(daoId, e.Amount1, e.Amount2);
-        var market = _markets.Get(daoId);
+        _markets.RemoveLiquidity(e.AggregateId, e.Amount1, e.Amount2);
+        var market = _markets.Get(e.AggregateId);
         var account = ByteStringToHexString(e.Account);
-        _balances.AddBalance(account, daoId, market.Asset1.Symbol, e.Amount1);
-        _balances.AddBalance(account, daoId, market.Asset2.Symbol, e.Amount2);
+        _balances.AddBalance(account, e.AggregateId, market.Asset1.Symbol, e.Amount1);
+        _balances.AddBalance(account, e.AggregateId, market.Asset2.Symbol, e.Amount2);
     }
 
     public void Handle(TokensSwapedPayload e)
