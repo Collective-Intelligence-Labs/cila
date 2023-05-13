@@ -17,6 +17,8 @@ namespace cila.Domain.Database {
             public static string AggregatedEvents = "aggregated-events";
             public static string Operations = "operations";
             public static string Nfts = "nfts";
+            public static string Markets = "markets";
+            public static string Balances = "balances";
 
             // Relay
             public static string Events  = "events";
@@ -52,6 +54,17 @@ namespace cila.Domain.Database {
         {
             return _client.GetDatabase(ReadmodelDatabaseName).GetCollection<NFTDocument>(Collections.Nfts);
         }
+
+        public IMongoCollection<BalanceDocument> GetBalancesCollection()
+        {
+            return _client.GetDatabase(ReadmodelDatabaseName).GetCollection<BalanceDocument>(Collections.Balances);
+        }
+
+        public IMongoCollection<MarketDocument> GetMarketsCollection()
+        {
+            return _client.GetDatabase(RelayDatabaseName).GetCollection<MarketDocument>(Collections.Markets);
+        }
+
 
 
         // Relay

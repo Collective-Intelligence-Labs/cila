@@ -6,12 +6,19 @@ enum DomainEventType {
   UNSPECIFIED = 0;
   NFT_MINTED = 1;
   NFT_TRANSFERED = 2;
+  AMM_CREATED = 3;
+  LIQUIDITY_ADDED = 4;
+  LIQUIDITY_REMOVED = 5;
+  TOKENS_SWAPPED = 6;
+  FUNDS_DEPOSITED = 7;
+  FUNDS_WITHDRAWN = 8;
 };
 
 message DomainEvent {
   uint64 evnt_idx = 1;
   DomainEventType evnt_type = 2;
   bytes evnt_payload = 3;
+  string aggregate_id = 4;
 }
 
 message NFTMintedPayload {
@@ -23,4 +30,51 @@ message NFTTransferedPayload {
     bytes hash = 1;
     bytes from = 2;
     bytes to = 3;
+}
+
+message AMMCreatedPayload {
+  string aggregate_id = 1;
+  bytes asset1 = 2;
+  bytes asset2 = 3;
+  uint64 supply1 = 4;
+  uint64 supply2 = 5;
+  bytes owner = 6;
+}
+
+message LiquidityAddedPayload {
+  string aggregate_id = 1;
+  uint64 amount1 = 2;
+  uint64 amount2 = 3;
+  uint64 shares = 4;
+  bytes account = 5;
+}
+
+message LiquidityRemovedPayload {
+  uint64 shares = 1;
+  uint64 amount1 = 2;
+  uint64 amount2 = 3;
+  bytes account = 4;
+}
+
+message TokensSwapedPayload {
+  string aggregate_id = 1;
+  int64 amount_from = 2;
+  bytes asset_from = 3;
+  int64 amount_to = 4;
+  bytes asset_to = 5;
+  bytes account = 6;
+}
+
+message FundsWithdrawnPayload {
+  string aggregate_id = 1;
+  bytes asset = 2;
+  uint64 amount = 3;
+  bytes account = 4;
+}
+
+message FundsDepositedPayload {
+  string aggregate_id = 1;
+  bytes asset = 2;
+  uint64 amount = 3;
+  bytes account = 4;
 }

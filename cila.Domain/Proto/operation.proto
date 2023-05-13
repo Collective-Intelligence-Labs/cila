@@ -29,3 +29,29 @@ message TransferNFTPayload {
     bytes hash = 1;
     bytes to = 2;
 }
+
+message CreateAMM {
+  string asset1;
+  string asset2;
+  uint64 supply1;
+  uint64 supply2;
+}
+
+message AddLiquidity {
+  uint64 amount1;
+  uint64 amount2;
+}
+
+message RemoveLiquidity {
+  uint64 share;
+}
+
+message SwapTokens {
+  string asset; 
+  uint64 amount;
+}
+
+message WithdrawFunds {
+  uint64 amount1;
+  uint64 amount2;
+}

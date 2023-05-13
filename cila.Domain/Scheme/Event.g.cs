@@ -24,19 +24,41 @@ namespace cila.Domain {
     static EventReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtldmVudC5wcm90byJaCgtEb21haW5FdmVudBIQCghldm50X2lkeBgBIAEo",
+            "CgtldmVudC5wcm90byJwCgtEb21haW5FdmVudBIQCghldm50X2lkeBgBIAEo",
             "BBIjCglldm50X3R5cGUYAiABKA4yEC5Eb21haW5FdmVudFR5cGUSFAoMZXZu",
-            "dF9wYXlsb2FkGAMgASgMIi8KEE5GVE1pbnRlZFBheWxvYWQSDAoEaGFzaBgB",
-            "IAEoDBINCgVvd25lchgCIAEoDCI+ChRORlRUcmFuc2ZlcmVkUGF5bG9hZBIM",
-            "CgRoYXNoGAEgASgMEgwKBGZyb20YAiABKAwSCgoCdG8YAyABKAwqRgoPRG9t",
-            "YWluRXZlbnRUeXBlEg8KC1VOU1BFQ0lGSUVEEAASDgoKTkZUX01JTlRFRBAB",
-            "EhIKDk5GVF9UUkFOU0ZFUkVEEAJCDqoCC2NpbGEuRG9tYWluYgZwcm90bzM="));
+            "dF9wYXlsb2FkGAMgASgMEhQKDGFnZ3JlZ2F0ZV9pZBgEIAEoCSIvChBORlRN",
+            "aW50ZWRQYXlsb2FkEgwKBGhhc2gYASABKAwSDQoFb3duZXIYAiABKAwiPgoU",
+            "TkZUVHJhbnNmZXJlZFBheWxvYWQSDAoEaGFzaBgBIAEoDBIMCgRmcm9tGAIg",
+            "ASgMEgoKAnRvGAMgASgMImQKEUFNTUNyZWF0ZWRQYXlsb2FkEg4KBmFzc2V0",
+            "MRgBIAEoDBIOCgZhc3NldDIYAiABKAwSDwoHc3VwcGx5MRgDIAEoBBIPCgdz",
+            "dXBwbHkyGAQgASgEEg0KBW93bmVyGAUgASgMIkoKFUxpcXVpZGl0eUFkZGVk",
+            "UGF5bG9hZBIPCgdhbW91bnQxGAEgASgEEg8KB2Ftb3VudDIYAiABKAQSDwoH",
+            "YWNjb3VudBgDIAEoDCJcChdMaXF1aWRpdHlSZW1vdmVkUGF5bG9hZBIOCgZz",
+            "aGFyZXMYASABKAQSDwoHYW1vdW50MRgCIAEoBBIPCgdhbW91bnQyGAMgASgE",
+            "Eg8KB2FjY291bnQYBCABKAwidAoTVG9rZW5zU3dhcGVkUGF5bG9hZBITCgth",
+            "bW91bnRfZnJvbRgBIAEoAxISCgphc3NldF9mcm9tGAIgASgMEhEKCWFtb3Vu",
+            "dF90bxgDIAEoAxIQCghhc3NldF90bxgEIAEoDBIPCgdhY2NvdW50GAUgASgM",
+            "IkcKFUZ1bmRzV2l0aGRyYXduUGF5bG9hZBINCgVhc3NldBgBIAEoDBIOCgZh",
+            "bW91bnQYAiABKAQSDwoHYWNjb3VudBgDIAEoDCJHChVGdW5kc0RlcG9zaXRl",
+            "ZFBheWxvYWQSDQoFYXNzZXQYASABKAwSDgoGYW1vdW50GAIgASgEEg8KB2Fj",
+            "Y291bnQYAyABKAwqwQEKD0RvbWFpbkV2ZW50VHlwZRIPCgtVTlNQRUNJRklF",
+            "RBAAEg4KCk5GVF9NSU5URUQQARISCg5ORlRfVFJBTlNGRVJFRBACEg8KC0FN",
+            "TV9DUkVBVEVEEAMSEwoPTElRVUlESVRZX0FEREVEEAQSFQoRTElRVUlESVRZ",
+            "X1JFTU9WRUQQBRISCg5UT0tFTlNfU1dBUFBFRBAGEhMKD0ZVTkRTX0RFUE9T",
+            "SVRFRBAHEhMKD0ZVTkRTX1dJVEhEUkFXThAIQg6qAgtjaWxhLkRvbWFpbmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::cila.Domain.DomainEventType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.DomainEvent), global::cila.Domain.DomainEvent.Parser, new[]{ "EvntIdx", "EvntType", "EvntPayload" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.DomainEvent), global::cila.Domain.DomainEvent.Parser, new[]{ "EvntIdx", "EvntType", "EvntPayload", "AggregateId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.NFTMintedPayload), global::cila.Domain.NFTMintedPayload.Parser, new[]{ "Hash", "Owner" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.NFTTransferedPayload), global::cila.Domain.NFTTransferedPayload.Parser, new[]{ "Hash", "From", "To" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.NFTTransferedPayload), global::cila.Domain.NFTTransferedPayload.Parser, new[]{ "Hash", "From", "To" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.AMMCreatedPayload), global::cila.Domain.AMMCreatedPayload.Parser, new[]{ "Asset1", "Asset2", "Supply1", "Supply2", "Owner" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.LiquidityAddedPayload), global::cila.Domain.LiquidityAddedPayload.Parser, new[]{ "Amount1", "Amount2", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.LiquidityRemovedPayload), global::cila.Domain.LiquidityRemovedPayload.Parser, new[]{ "Shares", "Amount1", "Amount2", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.TokensSwapedPayload), global::cila.Domain.TokensSwapedPayload.Parser, new[]{ "AmountFrom", "AssetFrom", "AmountTo", "AssetTo", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.FundsWithdrawnPayload), global::cila.Domain.FundsWithdrawnPayload.Parser, new[]{ "Asset", "Amount", "Account" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::cila.Domain.FundsDepositedPayload), global::cila.Domain.FundsDepositedPayload.Parser, new[]{ "Asset", "Amount", "Account" }, null, null, null, null)
           }));
     }
     #endregion
@@ -47,6 +69,12 @@ namespace cila.Domain {
     [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
     [pbr::OriginalName("NFT_MINTED")] NftMinted = 1,
     [pbr::OriginalName("NFT_TRANSFERED")] NftTransfered = 2,
+    [pbr::OriginalName("AMM_CREATED")] AmmCreated = 3,
+    [pbr::OriginalName("LIQUIDITY_ADDED")] LiquidityAdded = 4,
+    [pbr::OriginalName("LIQUIDITY_REMOVED")] LiquidityRemoved = 5,
+    [pbr::OriginalName("TOKENS_SWAPPED")] TokensSwapped = 6,
+    [pbr::OriginalName("FUNDS_DEPOSITED")] FundsDeposited = 7,
+    [pbr::OriginalName("FUNDS_WITHDRAWN")] FundsWithdrawn = 8,
   }
 
   #endregion
@@ -89,6 +117,7 @@ namespace cila.Domain {
       evntIdx_ = other.evntIdx_;
       evntType_ = other.evntType_;
       evntPayload_ = other.evntPayload_;
+      aggregateId_ = other.aggregateId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -134,6 +163,18 @@ namespace cila.Domain {
       }
     }
 
+    /// <summary>Field number for the "aggregate_id" field.</summary>
+    public const int AggregateIdFieldNumber = 4;
+    private string aggregateId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AggregateId {
+      get { return aggregateId_; }
+      set {
+        aggregateId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -152,6 +193,7 @@ namespace cila.Domain {
       if (EvntIdx != other.EvntIdx) return false;
       if (EvntType != other.EvntType) return false;
       if (EvntPayload != other.EvntPayload) return false;
+      if (AggregateId != other.AggregateId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,6 +204,7 @@ namespace cila.Domain {
       if (EvntIdx != 0UL) hash ^= EvntIdx.GetHashCode();
       if (EvntType != global::cila.Domain.DomainEventType.Unspecified) hash ^= EvntType.GetHashCode();
       if (EvntPayload.Length != 0) hash ^= EvntPayload.GetHashCode();
+      if (AggregateId.Length != 0) hash ^= AggregateId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -192,6 +235,10 @@ namespace cila.Domain {
         output.WriteRawTag(26);
         output.WriteBytes(EvntPayload);
       }
+      if (AggregateId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AggregateId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -214,6 +261,10 @@ namespace cila.Domain {
         output.WriteRawTag(26);
         output.WriteBytes(EvntPayload);
       }
+      if (AggregateId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(AggregateId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -232,6 +283,9 @@ namespace cila.Domain {
       }
       if (EvntPayload.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(EvntPayload);
+      }
+      if (AggregateId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AggregateId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -253,6 +307,9 @@ namespace cila.Domain {
       }
       if (other.EvntPayload.Length != 0) {
         EvntPayload = other.EvntPayload;
+      }
+      if (other.AggregateId.Length != 0) {
+        AggregateId = other.AggregateId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -281,6 +338,10 @@ namespace cila.Domain {
             EvntPayload = input.ReadBytes();
             break;
           }
+          case 34: {
+            AggregateId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -306,6 +367,10 @@ namespace cila.Domain {
           }
           case 26: {
             EvntPayload = input.ReadBytes();
+            break;
+          }
+          case 34: {
+            AggregateId = input.ReadString();
             break;
           }
         }
@@ -795,6 +860,1769 @@ namespace cila.Domain {
           }
           case 26: {
             To = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class AMMCreatedPayload : pb::IMessage<AMMCreatedPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AMMCreatedPayload> _parser = new pb::MessageParser<AMMCreatedPayload>(() => new AMMCreatedPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AMMCreatedPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::cila.Domain.EventReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AMMCreatedPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AMMCreatedPayload(AMMCreatedPayload other) : this() {
+      asset1_ = other.asset1_;
+      asset2_ = other.asset2_;
+      supply1_ = other.supply1_;
+      supply2_ = other.supply2_;
+      owner_ = other.owner_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AMMCreatedPayload Clone() {
+      return new AMMCreatedPayload(this);
+    }
+
+    /// <summary>Field number for the "asset1" field.</summary>
+    public const int Asset1FieldNumber = 1;
+    private pb::ByteString asset1_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Asset1 {
+      get { return asset1_; }
+      set {
+        asset1_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "asset2" field.</summary>
+    public const int Asset2FieldNumber = 2;
+    private pb::ByteString asset2_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Asset2 {
+      get { return asset2_; }
+      set {
+        asset2_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "supply1" field.</summary>
+    public const int Supply1FieldNumber = 3;
+    private ulong supply1_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Supply1 {
+      get { return supply1_; }
+      set {
+        supply1_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "supply2" field.</summary>
+    public const int Supply2FieldNumber = 4;
+    private ulong supply2_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Supply2 {
+      get { return supply2_; }
+      set {
+        supply2_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "owner" field.</summary>
+    public const int OwnerFieldNumber = 5;
+    private pb::ByteString owner_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Owner {
+      get { return owner_; }
+      set {
+        owner_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AMMCreatedPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AMMCreatedPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Asset1 != other.Asset1) return false;
+      if (Asset2 != other.Asset2) return false;
+      if (Supply1 != other.Supply1) return false;
+      if (Supply2 != other.Supply2) return false;
+      if (Owner != other.Owner) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Asset1.Length != 0) hash ^= Asset1.GetHashCode();
+      if (Asset2.Length != 0) hash ^= Asset2.GetHashCode();
+      if (Supply1 != 0UL) hash ^= Supply1.GetHashCode();
+      if (Supply2 != 0UL) hash ^= Supply2.GetHashCode();
+      if (Owner.Length != 0) hash ^= Owner.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Asset1.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Asset1);
+      }
+      if (Asset2.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Asset2);
+      }
+      if (Supply1 != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Supply1);
+      }
+      if (Supply2 != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Supply2);
+      }
+      if (Owner.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Owner);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Asset1.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Asset1);
+      }
+      if (Asset2.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(Asset2);
+      }
+      if (Supply1 != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Supply1);
+      }
+      if (Supply2 != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Supply2);
+      }
+      if (Owner.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Owner);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Asset1.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Asset1);
+      }
+      if (Asset2.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Asset2);
+      }
+      if (Supply1 != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Supply1);
+      }
+      if (Supply2 != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Supply2);
+      }
+      if (Owner.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Owner);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AMMCreatedPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Asset1.Length != 0) {
+        Asset1 = other.Asset1;
+      }
+      if (other.Asset2.Length != 0) {
+        Asset2 = other.Asset2;
+      }
+      if (other.Supply1 != 0UL) {
+        Supply1 = other.Supply1;
+      }
+      if (other.Supply2 != 0UL) {
+        Supply2 = other.Supply2;
+      }
+      if (other.Owner.Length != 0) {
+        Owner = other.Owner;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Asset1 = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Asset2 = input.ReadBytes();
+            break;
+          }
+          case 24: {
+            Supply1 = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Supply2 = input.ReadUInt64();
+            break;
+          }
+          case 42: {
+            Owner = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Asset1 = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            Asset2 = input.ReadBytes();
+            break;
+          }
+          case 24: {
+            Supply1 = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Supply2 = input.ReadUInt64();
+            break;
+          }
+          case 42: {
+            Owner = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class LiquidityAddedPayload : pb::IMessage<LiquidityAddedPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LiquidityAddedPayload> _parser = new pb::MessageParser<LiquidityAddedPayload>(() => new LiquidityAddedPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LiquidityAddedPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::cila.Domain.EventReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LiquidityAddedPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LiquidityAddedPayload(LiquidityAddedPayload other) : this() {
+      amount1_ = other.amount1_;
+      amount2_ = other.amount2_;
+      account_ = other.account_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LiquidityAddedPayload Clone() {
+      return new LiquidityAddedPayload(this);
+    }
+
+    /// <summary>Field number for the "amount1" field.</summary>
+    public const int Amount1FieldNumber = 1;
+    private ulong amount1_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Amount1 {
+      get { return amount1_; }
+      set {
+        amount1_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "amount2" field.</summary>
+    public const int Amount2FieldNumber = 2;
+    private ulong amount2_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Amount2 {
+      get { return amount2_; }
+      set {
+        amount2_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 3;
+    private pb::ByteString account_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LiquidityAddedPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LiquidityAddedPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Amount1 != other.Amount1) return false;
+      if (Amount2 != other.Amount2) return false;
+      if (Account != other.Account) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Amount1 != 0UL) hash ^= Amount1.GetHashCode();
+      if (Amount2 != 0UL) hash ^= Amount2.GetHashCode();
+      if (Account.Length != 0) hash ^= Account.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Amount1 != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Amount1);
+      }
+      if (Amount2 != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount2);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Amount1 != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Amount1);
+      }
+      if (Amount2 != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount2);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Amount1 != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount1);
+      }
+      if (Amount2 != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount2);
+      }
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Account);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LiquidityAddedPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Amount1 != 0UL) {
+        Amount1 = other.Amount1;
+      }
+      if (other.Amount2 != 0UL) {
+        Amount2 = other.Amount2;
+      }
+      if (other.Account.Length != 0) {
+        Account = other.Account;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Amount1 = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Amount2 = input.ReadUInt64();
+            break;
+          }
+          case 26: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Amount1 = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Amount2 = input.ReadUInt64();
+            break;
+          }
+          case 26: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class LiquidityRemovedPayload : pb::IMessage<LiquidityRemovedPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LiquidityRemovedPayload> _parser = new pb::MessageParser<LiquidityRemovedPayload>(() => new LiquidityRemovedPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LiquidityRemovedPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::cila.Domain.EventReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LiquidityRemovedPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LiquidityRemovedPayload(LiquidityRemovedPayload other) : this() {
+      shares_ = other.shares_;
+      amount1_ = other.amount1_;
+      amount2_ = other.amount2_;
+      account_ = other.account_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LiquidityRemovedPayload Clone() {
+      return new LiquidityRemovedPayload(this);
+    }
+
+    /// <summary>Field number for the "shares" field.</summary>
+    public const int SharesFieldNumber = 1;
+    private ulong shares_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Shares {
+      get { return shares_; }
+      set {
+        shares_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "amount1" field.</summary>
+    public const int Amount1FieldNumber = 2;
+    private ulong amount1_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Amount1 {
+      get { return amount1_; }
+      set {
+        amount1_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "amount2" field.</summary>
+    public const int Amount2FieldNumber = 3;
+    private ulong amount2_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Amount2 {
+      get { return amount2_; }
+      set {
+        amount2_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 4;
+    private pb::ByteString account_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LiquidityRemovedPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LiquidityRemovedPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Shares != other.Shares) return false;
+      if (Amount1 != other.Amount1) return false;
+      if (Amount2 != other.Amount2) return false;
+      if (Account != other.Account) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Shares != 0UL) hash ^= Shares.GetHashCode();
+      if (Amount1 != 0UL) hash ^= Amount1.GetHashCode();
+      if (Amount2 != 0UL) hash ^= Amount2.GetHashCode();
+      if (Account.Length != 0) hash ^= Account.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Shares != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Shares);
+      }
+      if (Amount1 != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount1);
+      }
+      if (Amount2 != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Amount2);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Shares != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(Shares);
+      }
+      if (Amount1 != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount1);
+      }
+      if (Amount2 != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(Amount2);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Shares != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Shares);
+      }
+      if (Amount1 != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount1);
+      }
+      if (Amount2 != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount2);
+      }
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Account);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LiquidityRemovedPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Shares != 0UL) {
+        Shares = other.Shares;
+      }
+      if (other.Amount1 != 0UL) {
+        Amount1 = other.Amount1;
+      }
+      if (other.Amount2 != 0UL) {
+        Amount2 = other.Amount2;
+      }
+      if (other.Account.Length != 0) {
+        Account = other.Account;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Shares = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Amount1 = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            Amount2 = input.ReadUInt64();
+            break;
+          }
+          case 34: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Shares = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            Amount1 = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            Amount2 = input.ReadUInt64();
+            break;
+          }
+          case 34: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class TokensSwapedPayload : pb::IMessage<TokensSwapedPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TokensSwapedPayload> _parser = new pb::MessageParser<TokensSwapedPayload>(() => new TokensSwapedPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TokensSwapedPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::cila.Domain.EventReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokensSwapedPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokensSwapedPayload(TokensSwapedPayload other) : this() {
+      amountFrom_ = other.amountFrom_;
+      assetFrom_ = other.assetFrom_;
+      amountTo_ = other.amountTo_;
+      assetTo_ = other.assetTo_;
+      account_ = other.account_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TokensSwapedPayload Clone() {
+      return new TokensSwapedPayload(this);
+    }
+
+    /// <summary>Field number for the "amount_from" field.</summary>
+    public const int AmountFromFieldNumber = 1;
+    private long amountFrom_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AmountFrom {
+      get { return amountFrom_; }
+      set {
+        amountFrom_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "asset_from" field.</summary>
+    public const int AssetFromFieldNumber = 2;
+    private pb::ByteString assetFrom_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString AssetFrom {
+      get { return assetFrom_; }
+      set {
+        assetFrom_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "amount_to" field.</summary>
+    public const int AmountToFieldNumber = 3;
+    private long amountTo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long AmountTo {
+      get { return amountTo_; }
+      set {
+        amountTo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "asset_to" field.</summary>
+    public const int AssetToFieldNumber = 4;
+    private pb::ByteString assetTo_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString AssetTo {
+      get { return assetTo_; }
+      set {
+        assetTo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 5;
+    private pb::ByteString account_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TokensSwapedPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TokensSwapedPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AmountFrom != other.AmountFrom) return false;
+      if (AssetFrom != other.AssetFrom) return false;
+      if (AmountTo != other.AmountTo) return false;
+      if (AssetTo != other.AssetTo) return false;
+      if (Account != other.Account) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AmountFrom != 0L) hash ^= AmountFrom.GetHashCode();
+      if (AssetFrom.Length != 0) hash ^= AssetFrom.GetHashCode();
+      if (AmountTo != 0L) hash ^= AmountTo.GetHashCode();
+      if (AssetTo.Length != 0) hash ^= AssetTo.GetHashCode();
+      if (Account.Length != 0) hash ^= Account.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AmountFrom != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AmountFrom);
+      }
+      if (AssetFrom.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(AssetFrom);
+      }
+      if (AmountTo != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(AmountTo);
+      }
+      if (AssetTo.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(AssetTo);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AmountFrom != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(AmountFrom);
+      }
+      if (AssetFrom.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteBytes(AssetFrom);
+      }
+      if (AmountTo != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(AmountTo);
+      }
+      if (AssetTo.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(AssetTo);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AmountFrom != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AmountFrom);
+      }
+      if (AssetFrom.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(AssetFrom);
+      }
+      if (AmountTo != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AmountTo);
+      }
+      if (AssetTo.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(AssetTo);
+      }
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Account);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TokensSwapedPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AmountFrom != 0L) {
+        AmountFrom = other.AmountFrom;
+      }
+      if (other.AssetFrom.Length != 0) {
+        AssetFrom = other.AssetFrom;
+      }
+      if (other.AmountTo != 0L) {
+        AmountTo = other.AmountTo;
+      }
+      if (other.AssetTo.Length != 0) {
+        AssetTo = other.AssetTo;
+      }
+      if (other.Account.Length != 0) {
+        Account = other.Account;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AmountFrom = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            AssetFrom = input.ReadBytes();
+            break;
+          }
+          case 24: {
+            AmountTo = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            AssetTo = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AmountFrom = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            AssetFrom = input.ReadBytes();
+            break;
+          }
+          case 24: {
+            AmountTo = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            AssetTo = input.ReadBytes();
+            break;
+          }
+          case 42: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class FundsWithdrawnPayload : pb::IMessage<FundsWithdrawnPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FundsWithdrawnPayload> _parser = new pb::MessageParser<FundsWithdrawnPayload>(() => new FundsWithdrawnPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FundsWithdrawnPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::cila.Domain.EventReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FundsWithdrawnPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FundsWithdrawnPayload(FundsWithdrawnPayload other) : this() {
+      asset_ = other.asset_;
+      amount_ = other.amount_;
+      account_ = other.account_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FundsWithdrawnPayload Clone() {
+      return new FundsWithdrawnPayload(this);
+    }
+
+    /// <summary>Field number for the "asset" field.</summary>
+    public const int AssetFieldNumber = 1;
+    private pb::ByteString asset_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Asset {
+      get { return asset_; }
+      set {
+        asset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 2;
+    private ulong amount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Amount {
+      get { return amount_; }
+      set {
+        amount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 3;
+    private pb::ByteString account_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FundsWithdrawnPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FundsWithdrawnPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Asset != other.Asset) return false;
+      if (Amount != other.Amount) return false;
+      if (Account != other.Account) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Asset.Length != 0) hash ^= Asset.GetHashCode();
+      if (Amount != 0UL) hash ^= Amount.GetHashCode();
+      if (Account.Length != 0) hash ^= Account.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Asset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Asset);
+      }
+      if (Amount != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Asset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Asset);
+      }
+      if (Amount != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Asset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Asset);
+      }
+      if (Amount != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount);
+      }
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Account);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FundsWithdrawnPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Asset.Length != 0) {
+        Asset = other.Asset;
+      }
+      if (other.Amount != 0UL) {
+        Amount = other.Amount;
+      }
+      if (other.Account.Length != 0) {
+        Account = other.Account;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Asset = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Amount = input.ReadUInt64();
+            break;
+          }
+          case 26: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Asset = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Amount = input.ReadUInt64();
+            break;
+          }
+          case 26: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class FundsDepositedPayload : pb::IMessage<FundsDepositedPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FundsDepositedPayload> _parser = new pb::MessageParser<FundsDepositedPayload>(() => new FundsDepositedPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FundsDepositedPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::cila.Domain.EventReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FundsDepositedPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FundsDepositedPayload(FundsDepositedPayload other) : this() {
+      asset_ = other.asset_;
+      amount_ = other.amount_;
+      account_ = other.account_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FundsDepositedPayload Clone() {
+      return new FundsDepositedPayload(this);
+    }
+
+    /// <summary>Field number for the "asset" field.</summary>
+    public const int AssetFieldNumber = 1;
+    private pb::ByteString asset_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Asset {
+      get { return asset_; }
+      set {
+        asset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 2;
+    private ulong amount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Amount {
+      get { return amount_; }
+      set {
+        amount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "account" field.</summary>
+    public const int AccountFieldNumber = 3;
+    private pb::ByteString account_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Account {
+      get { return account_; }
+      set {
+        account_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FundsDepositedPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FundsDepositedPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Asset != other.Asset) return false;
+      if (Amount != other.Amount) return false;
+      if (Account != other.Account) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Asset.Length != 0) hash ^= Asset.GetHashCode();
+      if (Amount != 0UL) hash ^= Amount.GetHashCode();
+      if (Account.Length != 0) hash ^= Account.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Asset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Asset);
+      }
+      if (Amount != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Asset.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Asset);
+      }
+      if (Amount != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Amount);
+      }
+      if (Account.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Account);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Asset.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Asset);
+      }
+      if (Amount != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Amount);
+      }
+      if (Account.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Account);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FundsDepositedPayload other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Asset.Length != 0) {
+        Asset = other.Asset;
+      }
+      if (other.Amount != 0UL) {
+        Amount = other.Amount;
+      }
+      if (other.Account.Length != 0) {
+        Account = other.Account;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Asset = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Amount = input.ReadUInt64();
+            break;
+          }
+          case 26: {
+            Account = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Asset = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Amount = input.ReadUInt64();
+            break;
+          }
+          case 26: {
+            Account = input.ReadBytes();
             break;
           }
         }
