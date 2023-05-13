@@ -4,8 +4,7 @@ using cila.Relay;
 using Confluent.Kafka;
 
 internal class Program
-{
-    
+{  
     private static void Main(string[] args)
     {
         var cnfg = new ConfigurationBuilder();

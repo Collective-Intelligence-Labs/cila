@@ -26,6 +26,8 @@ namespace cila.Domain
 
         public string PrivateKey { get; set; }
 
+        public string Symbol { get; set; }
+
         public string EventStoreContract { get; set; }
 
         public string DispatcherContract { get; set; }

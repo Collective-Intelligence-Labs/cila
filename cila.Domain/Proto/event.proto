@@ -18,7 +18,6 @@ message DomainEvent {
   uint64 evnt_idx = 1;
   DomainEventType evnt_type = 2;
   bytes evnt_payload = 3;
-  string aggregate_id = 4;
 }
 
 message NFTMintedPayload {

@@ -17,7 +17,13 @@ namespace cila.Domain.Database.Services
         public MarketDocument Get(string id)
         {
             var filter = Builders<MarketDocument>.Filter.Eq(x => x.Id, id);
-            return database.GetMarketsCollection().Find(filter).FirstOrDefault();
+            return _markets.Find(filter).FirstOrDefault();
+        }
+
+        public IEnumerable<MarketDocument> GetAll()
+        {
+            var filter = Builders<MarketDocument>.Filter.Empty;
+            return _markets.Find(filter).ToList();;
         }
 
         public void CreateNew(MarketDocument doc)

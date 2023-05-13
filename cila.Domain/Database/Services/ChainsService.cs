@@ -33,6 +33,7 @@ namespace cila.Domain.Database.Services
                     PrivateKey = x.PrivateKey,
                     DispatcherContract = x.DispatcherContract,
                     RPC = x.Rpc,
+                    Symbol = x.Symbol,
                     ChainType = x.ChainType,
                     EventStoreContract = x.EventStoreContract
                 }));

@@ -12,6 +12,8 @@ namespace cila.Domain.Database.Documents
 
         public string PrivateKey {get;set;}
 
+        public string Symbol {get;set;}
+
         public string DispatcherContract {get;set;}
 
         public string EventStoreContract { get; set; }

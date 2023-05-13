@@ -64,7 +64,9 @@ internal class Program
             .AddScoped<AggregagtedEventsService>()
             .AddScoped<ChainClientsFactory>()
             .AddScoped<NftService>()
-            .AddScoped<OperationsService>();
+            .AddScoped<OperationsService>()
+            .AddScoped<MarketsService>()
+            .AddScoped<BalancesService>();
             
         services.AddSingleton<EventsDispatcher>();
         services.AddSingleton(configProducer);

@@ -65,8 +65,6 @@ namespace cila.Domain.Database {
             return _client.GetDatabase(RelayDatabaseName).GetCollection<MarketDocument>(Collections.Markets);
         }
 
-
-
         // Relay
         public IMongoCollection<SubscriptionDocument> GetSubscriptionsCollection()
         {

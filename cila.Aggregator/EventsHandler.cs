@@ -83,30 +83,30 @@ public class EventsHandler: IEventHandler
 
     public void Handle(TokensSwapedPayload e)
     {
-        var market = _markets.Get(daoId);
+        var market = _markets.Get(e.AggregateId);
         var account = ByteStringToHexString(e.Account);
         _markets.SwapTokens(
-            daoId,
+            e.AggregateId,
             account, 
             ByteStringToHexString(e.AssetFrom), 
             ByteStringToHexString(e.AssetTo), 
             (ulong)e.AmountFrom,
             (ulong)e.AmountTo);
     
-        _balances.RemoveBalance(account, daoId, ByteStringToHexString(e.AssetFrom), (ulong)e.AmountFrom);
-        _balances.AddBalance(account, daoId, ByteStringToHexString(e.AssetTo), (ulong)e.AmountTo);
+        _balances.RemoveBalance(account, e.AggregateId, ByteStringToHexString(e.AssetFrom), (ulong)e.AmountFrom);
+        _balances.AddBalance(account, e.AggregateId, ByteStringToHexString(e.AssetTo), (ulong)e.AmountTo);
     }
 
     public void Handle(FundsWithdrawnPayload e)
     {
         var account = ByteStringToHexString(e.Account);
-        _balances.RemoveBalance(account, daoId, ByteStringToHexString(e.Asset), e.Amount);
+        _balances.RemoveBalance(account, e.AggregateId, ByteStringToHexString(e.Asset), e.Amount);
     }
 
     public void Handle(FundsDepositedPayload e)
     {
         var account = ByteStringToHexString(e.Account);
-        _balances.AddBalance(account, daoId, ByteStringToHexString(e.Asset), e.Amount);
+        _balances.AddBalance(account, e.AggregateId, ByteStringToHexString(e.Asset), e.Amount);
     }
 
     private string GetId(ByteString hash, ByteString owner)
