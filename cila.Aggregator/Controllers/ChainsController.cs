@@ -22,7 +22,7 @@ public class ChainsController : ControllerBase
         return chains.GetAll();
     }
 
-    [HttpGet("/tokens")]
+    [HttpGet("tokens")]
     public IEnumerable<string> GetTokens()
     {
         return chains.GetAll().Select(x=> x.Symbol);

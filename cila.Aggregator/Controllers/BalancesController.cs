@@ -22,7 +22,7 @@ public class BalancesController : ControllerBase
         return balances.GetAll();
     }
 
-    [HttpGet("/account/{id}")]
+    [HttpGet("{id}")]
     public IEnumerable<BalanceDocument> GetByAccount(string id)
     {
         return balances.GetAllAccountBalances(id);
